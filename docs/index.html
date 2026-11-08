@@ -1,47 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>cv-ecommerce — Vietnam briefing</title>
-  <meta name="description" content="Market, tax, Shopify, and skill briefing for an AI-powered China-to-Vietnam shopping web app." />
+  <title>cv-ecommerce — 越南市场简报</title>
+  <meta name="description" content="面向越南的中国货源 AI 购物网页：市场、税务、Shopify 与技能简报。" data-i18n-attr="content:idx.desc" />
   <style>
     :root {
-      --bg: #0f1419;
-      --panel: #171e27;
-      --line: #2a3542;
-      --text: #e8eef4;
-      --muted: #93a0ae;
-      --accent: #3d9cf0;
-      --good: #3db88a;
-      --warn: #e0a23a;
-      --bad: #e06b6b;
-      --shopee: #ee4d2d;
-      --tiktok: #25f4ee;
+      --bg: #0f1419; --panel: #171e27; --line: #2a3542; --text: #e8eef4;
+      --muted: #93a0ae; --accent: #3d9cf0; --good: #3db88a; --warn: #e0a23a;
+      --bad: #e06b6b; --shopee: #ee4d2d; --tiktok: #25f4ee;
     }
     * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.55 "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif; }
     a { color: var(--accent); }
-    header {
-      border-bottom: 1px solid var(--line);
-      padding: 28px 20px 20px;
-      max-width: 1080px;
-      margin: 0 auto;
-    }
-    .kicker { color: var(--muted); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
-    h1 { font-size: 28px; line-height: 1.2; margin: 8px 0 10px; font-weight: 600; }
+    header { border-bottom: 1px solid var(--line); padding: 28px 20px 20px; max-width: 1080px; margin: 0 auto; }
+    .kicker { color: var(--muted); font-size: 12px; letter-spacing: .06em; }
+    h1 { font-size: 28px; line-height: 1.25; margin: 8px 0 10px; font-weight: 600; }
     h2 { font-size: 20px; margin: 0 0 12px; font-weight: 600; }
     h3 { font-size: 15px; margin: 0 0 8px; font-weight: 600; }
     p { color: var(--muted); margin: 0 0 12px; }
     .lead { color: var(--text); max-width: 720px; }
-    nav {
-      display: flex; flex-wrap: wrap; gap: 10px 16px;
-      max-width: 1080px; margin: 0 auto; padding: 12px 20px;
-      border-bottom: 1px solid var(--line); position: sticky; top: 0;
-      background: var(--bg); z-index: 2;
-    }
+    nav { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; max-width: 1080px; margin: 0 auto; padding: 12px 20px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--bg); z-index: 2; }
     nav a { color: var(--muted); text-decoration: none; font-size: 13px; }
     nav a:hover { color: var(--text); }
+    .lang { margin-left: auto; display: flex; gap: 6px; }
+    .lang button { background: transparent; border: 1px solid var(--line); color: var(--muted); padding: 3px 10px; cursor: pointer; font-size: 12px; }
+    .lang button.active { color: var(--text); border-color: var(--accent); }
     main { max-width: 1080px; margin: 0 auto; padding: 24px 20px 80px; }
     section { margin: 40px 0; }
     .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
@@ -75,199 +60,204 @@
     @media (max-width: 800px) {
       .kpis, .grid2, .shots { grid-template-columns: 1fr; }
       h1 { font-size: 22px; }
+      .lang { margin-left: 0; width: 100%; }
     }
   </style>
 </head>
-<body>
+<body data-title-key="idx.title">
   <header>
-    <div class="kicker">cv-ecommerce · briefing · 8 Nov 2026</div>
-    <h1>AI shopping for cheaper Chinese goods, Vietnam first</h1>
-    <p class="lead">Taylor is spinning up an AI-powered <strong>web</strong> store (same idea as the earlier mobile app) so Vietnamese buyers can get China-origin products cheaper. Early stage is Shopify. This page is the working briefing: what the chat said, what the VN market actually looks like, and which skills/tools to use next.</p>
+    <div class="kicker" data-i18n="idx.kicker">cv-ecommerce · 简报 · 2026年11月8日</div>
+    <h1 data-i18n="idx.h1">AI 帮越南用户买到更便宜的中国货</h1>
+    <p class="lead" data-i18n="idx.lead">Taylor 正在做一款 AI 驱动的<strong>网页</strong>购物产品（同一项目，由原来的 App 改为 Web），帮越南买家买到更便宜的中国货。早期用 Shopify。本页是工作简报：聊天结论、越南市场事实、以及下一步要用的技能与工具。</p>
   </header>
-    <nav>
-    <a href="index.html">Market briefing</a>
-    <a href="compare.html">Fees &amp; shipping</a>
-    <a href="#brief">Chat brief</a>
-    <a href="#market">Market</a>
-    <a href="#tax">China → VN tax</a>
-    <a href="#shopify">Shopify stack</a>
-    <a href="#buyer">Buyer behavior</a>
-    <a href="#skills">Skills</a>
-    <a href="#plan">Recommended plan</a>
-    <a href="#sources">Sources</a>
+  <nav>
+    <a href="index.html" data-i18n="nav.briefing">市场简报</a>
+    <a href="compare.html" data-i18n="nav.compare">费用与运费</a>
+    <a href="#brief" data-i18n="nav.brief">聊天结论</a>
+    <a href="#market" data-i18n="nav.market">市场</a>
+    <a href="#tax" data-i18n="nav.tax">中越税务</a>
+    <a href="#shopify" data-i18n="nav.shopify">Shopify 方案</a>
+    <a href="#buyer" data-i18n="nav.buyer">买家习惯</a>
+    <a href="#skills" data-i18n="nav.skills">技能</a>
+    <a href="#plan" data-i18n="nav.plan">30 天计划</a>
+    <a href="#sources" data-i18n="nav.sources">来源</a>
+    <div class="lang" role="group" aria-label="语言">
+      <button type="button" data-lang-btn="zh" class="active">中文</button>
+      <button type="button" data-lang-btn="en">EN</button>
+    </div>
   </nav>
   <main>
     <section id="brief">
-      <h2>What the chat decided</h2>
+      <h2 data-i18n="idx.brief.h2">聊天里定下来的事</h2>
       <div class="grid2">
         <div class="card">
           <table>
-            <tr><th>Who</th><td>Taylor (TC) founding; Lam joining for VN market knowledge</td></tr>
-            <tr><th>Product</th><td>Web app with AI to help users buy cheaper Chinese products</td></tr>
-            <tr><th>Not</th><td>A news/info site (midasmarkets.xyz was a false lead). Not the old mobile app.</td></tr>
-            <tr><th>Geo</th><td>SEA cross-border e-commerce, start in Vietnam</td></tr>
-            <tr><th>MVP</th><td>“We’ll start with Shopify in the early stages.”</td></tr>
-            <tr><th>Now</th><td>Product selection + team; Lam to be added to group chat</td></tr>
+            <tr><th data-i18n="idx.th.who">谁</th><td data-i18n="idx.td.who">Taylor（TC）发起；Lam 加入，补越南市场判断</td></tr>
+            <tr><th data-i18n="idx.th.product">产品</th><td data-i18n="idx.td.product">AI 网页，帮用户买更便宜的中国商品</td></tr>
+            <tr><th data-i18n="idx.th.not">不是</th><td data-i18n="idx.td.not">资讯站（midasmarkets.xyz 是误导）。也不是原来的手机 App。</td></tr>
+            <tr><th data-i18n="idx.th.geo">市场</th><td data-i18n="idx.td.geo">东南亚跨境电商，先做越南</td></tr>
+            <tr><th data-i18n="idx.th.mvp">MVP</th><td data-i18n="idx.td.mvp">「早期阶段先用 Shopify。」</td></tr>
+            <tr><th data-i18n="idx.th.now">现在</th><td data-i18n="idx.td.now">选品、组团队；之后把 Lam 拉进群</td></tr>
           </table>
         </div>
         <div class="card">
-          <h3>Implication</h3>
-          <p>This is not “build Shopee.” Marketplace GMV is a duopoly. A Shopify store only works if AI + China sourcing produces a <em>visible landed-price advantage</em> after VAT, duty, freight, and slow delivery — and if checkout feels local (VND, wallets, COD).</p>
+          <h3 data-i18n="idx.impl.h3">含义</h3>
+          <p data-i18n="idx.impl.p">这不是「再做一个 Shopee」。平台 GMV 已是双寡头。Shopify 独立站只有在 AI + 中国货源给出<strong>看得见的落地价优势</strong>（增值税、关税、运费、慢物流之后仍便宜），并且结账本地化（越南盾、钱包、货到付款）时才成立。</p>
         </div>
       </div>
       <div class="shots" style="margin-top:16px">
         <figure>
-          <img src="assets/chat-brief.png" alt="Chat: AI-powered cross-border e-commerce in SEA, web not mobile" />
+          <img src="assets/chat-brief.png" alt="聊天：东南亚 AI 跨境电商，Web 而非 App" data-i18n-attr="alt:idx.img1" />
         </figure>
         <figure>
-          <img src="assets/chat-shopify.png" alt="Chat: Shopify in early stages, study Vietnam e-commerce" />
+          <img src="assets/chat-shopify.png" alt="聊天：早期用 Shopify，并研究越南电商" data-i18n-attr="alt:idx.img2" />
         </figure>
       </div>
     </section>
 
     <section id="market">
-      <h2>Vietnam e-commerce snapshot</h2>
-      <p>Two different rulers exist. Do not add them. Marketplace GMV is Shopee + TikTok Shop + Lazada + Tiki. Nationwide B2C also includes brand sites and social selling.</p>
+      <h2 data-i18n="idx.market.h2">越南电商快照</h2>
+      <p data-i18n="idx.market.p">两套尺子不要加在一起。平台 GMV 只含 Shopee、TikTok Shop、Lazada、Tiki。全国 B2C 还含品牌官网和社交零售。</p>
       <div class="kpis">
-        <div class="kpi"><b>$16.35B</b><span>4-platform GMV 2025 (Metric)</span></div>
-        <div class="kpi"><b>+35%</b><span>YoY marketplace GMV</span></div>
-        <div class="kpi"><b>$31–38.5B</b><span>Broader B2C 2025 (MoIT/VECOM)</span></div>
-        <div class="kpi"><b>$44.3B</b><span>VECOM 2026 projection</span></div>
+        <div class="kpi"><b>$16.35B</b><span data-i18n="idx.kpi.gmv">四大平台 GMV 2025（Metric）</span></div>
+        <div class="kpi"><b>+35%</b><span data-i18n="idx.kpi.yoy">平台 GMV 同比</span></div>
+        <div class="kpi"><b>$31–38.5B</b><span data-i18n="idx.kpi.b2c">更广的 B2C 2025（工贸部 / VECOM）</span></div>
+        <div class="kpi"><b>$44.3B</b><span data-i18n="idx.kpi.proj">VECOM 2026 预测</span></div>
       </div>
       <div class="grid2" style="margin-top:16px">
         <div class="card">
-          <h3>Four-platform share, full year 2025 (Metric)</h3>
+          <h3 data-i18n="idx.share.h3">四大平台份额，2025 全年（Metric）</h3>
           <div class="bar"><span>Shopee</span><div class="track"><div class="fill s" style="width:56.04%"></div></div><span>56.0%</span></div>
           <div class="bar"><span>TikTok Shop</span><div class="track"><div class="fill t" style="width:41.31%"></div></div><span>41.3%</span></div>
           <div class="bar"><span>Lazada</span><div class="track"><div class="fill l" style="width:2%"></div></div><span>~2%</span></div>
           <div class="bar"><span>Tiki</span><div class="track"><div class="fill k" style="width:0.65%"></div></div><span>&lt;1%</span></div>
-          <p style="margin-top:12px;font-size:13px">Together Shopee + TikTok Shop ≈ 97%. Q&amp;Me (May 2025–Apr 2026) already has TikTok Shop at 44% vs Shopee 53%. H1 2026 Metric GMV VND 291.6T (+44.1%); YouNet counts VND 264.8T (+19%) for the same window — cite the source you use.</p>
+          <p style="margin-top:12px;font-size:13px" data-i18n="idx.share.note">Shopee + TikTok Shop ≈ 97%。Q&amp;Me（2025.5–2026.4）TikTok Shop 已到 44%，Shopee 53%。2026 上半年 Metric GMV 291.6 万亿越盾（+44.1%）；YouNet 同期 264.8 万亿（+19%）——引用时写清来源。</p>
         </div>
         <div class="card">
-          <h3>Operating climate</h3>
+          <h3 data-i18n="idx.ops.h3">经营环境</h3>
           <ul>
-            <li>3.94B items sold on the four platforms in 2025 (+15%).</li>
-            <li>Active sellers fell 7.4% to ~601.8k — volume is consolidating.</li>
-            <li>HCMC + Hanoi dominate Shopee GMV (Metric: ~42% and ~41% of Shopee’s VN GMV).</li>
-            <li>H1 2026 category growth: electronics 26%, FMCG 20%, fashion 18%, beauty 12%.</li>
-            <li>2025 popular cats: beauty, home/lifestyle, women’s fashion.</li>
+            <li data-i18n="idx.ops.l1">2025 四大平台售出 39.4 亿件（+15%）。</li>
+            <li data-i18n="idx.ops.l2">活跃卖家降至约 60.18 万（-7.4%），量向头部集中。</li>
+            <li data-i18n="idx.ops.l3">胡志明市与河内主导 Shopee GMV（Metric：约 42% 与 41%）。</li>
+            <li data-i18n="idx.ops.l4">2026 上半年品类增速：电子 26%、快消 20%、时尚 18%、美妆 12%。</li>
+            <li data-i18n="idx.ops.l5">2025 热门：美妆、家居生活、女装。</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section id="tax">
-      <h2>Why “cheaper from China” is getting harder</h2>
-      <p>The old loophole — express parcels under VND 1 million with no import VAT — is gone. Duty relief is still there, but a 2026 draft would almost wipe it out.</p>
+      <h2 data-i18n="idx.tax.h2">为什么「中国货更便宜」越来越难</h2>
+      <p data-i18n="idx.tax.p">旧漏洞已没：快递包裹 100 万越盾以下免进口增值税的时代结束了。关税减免还在，但 2026 草案几乎会把它砍掉。</p>
       <div class="grid2">
         <div class="card">
           <div class="timeline">
-            <div class="titem"><strong>18 Feb 2025</strong><span class="tag bad">in force</span><p>Decision 01/2025/QĐ-TTg: every express parcel pays import VAT, including ≤ VND 1,000,000 (~USD 40). Press cited 4–5 million small China→VN orders/day under the old exemption.</p></div>
-            <div class="titem"><strong>Today (Nov 2026)</strong><span class="tag ok">current</span><p>Duty still exempt under ~VND 1M per express parcel. VAT 10% standard; many goods temporarily 8% until 31 Dec 2026. ACFTA Form E can cut China duty vs MFN (apparel/cosmetics often 15–22% MFN).</p></div>
-            <div class="titem"><strong>Sep 2026 draft</strong><span class="tag warn">not issued</span><p>MoF consults on cutting the duty exemption to ~VND 100,000 (~USD 4) or tax payable ≤ VND 10,000. If adopted, almost every commercial parcel pays duty + VAT.</p></div>
-            <div class="titem"><strong>1 Jul 2026</strong><span class="tag warn">law live</span><p>E-commerce Law 122/2025/QH15: livestream ID, seller quality docs, platform duties. A Vietnamese-language or .vn storefront can be treated as a platform and may need registration + resident representative.</p></div>
+            <div class="titem"><strong>2025-02-18</strong><span class="tag bad" data-i18n="idx.tax.inforce">已生效</span><p data-i18n="idx.tax.t1">第 01/2025/QĐ-TTg 号决定：所有快递包裹都缴进口增值税，含 ≤100 万越盾（约 40 美元）。媒体称旧免税下每天约 400–500 万票中国小包进越。</p></div>
+            <div class="titem"><strong>现在（2026 年 11 月）</strong><span class="tag ok" data-i18n="idx.tax.current">现行</span><p data-i18n="idx.tax.t2">关税仍约 100 万越盾/票以下免。增值税标准 10%；多数商品临时 8% 至 2026-12-31。ACFTA 原产地证（Form E）可相对 MFN 降关税（服装/化妆品 MFN 常 15–22%）。</p></div>
+            <div class="titem"><strong>2026 年 9 月草案</strong><span class="tag warn" data-i18n="idx.tax.notissued">未颁布</span><p data-i18n="idx.tax.t3">财政部征求把关税免征额降到约 10 万越盾（约 4 美元）或应纳税额 ≤1 万越盾。若通过，几乎所有商业小包都要关税+增值税。</p></div>
+            <div class="titem"><strong>2026-07-01</strong><span class="tag warn" data-i18n="idx.tax.lawlive">法律生效</span><p data-i18n="idx.tax.t4">电商法 122/2025/QH15：直播实名、卖家资质、平台义务。越南语或 .vn 站点可能被认定为平台，需登记并指定境内代表。</p></div>
           </div>
         </div>
         <div class="card">
-          <h3>Landed-cost stack to model on every SKU</h3>
+          <h3 data-i18n="idx.landed.h3">每个 SKU 都要算的落地成本</h3>
           <ol>
-            <li>China EXW (1688 / factory)</li>
-            <li>Inbound freight + insurance (CIF)</li>
-            <li>Import duty if parcel &gt; VND 1M (HS code; ACFTA if C/O)</li>
-            <li>VAT on (CIF + duty)</li>
-            <li>Last-mile (GHN / GHTK / Viettel Post / J&amp;T)</li>
-            <li>Payment cost + COD fail/return leakage</li>
-            <li>Shopify subscription + 3rd-party transaction fee</li>
+            <li data-i18n="idx.landed.l1">中国出厂价（1688 / 工厂）</li>
+            <li data-i18n="idx.landed.l2">头程运费 + 保险（CIF）</li>
+            <li data-i18n="idx.landed.l3">包裹 &gt;100 万越盾则进口关税（HS；有 Form E 走 ACFTA）</li>
+            <li data-i18n="idx.landed.l4">增值税（CIF + 关税）</li>
+            <li data-i18n="idx.landed.l5">尾程（GHN / GHTK / 越军邮 / J&amp;T）</li>
+            <li data-i18n="idx.landed.l6">支付成本 + 货到付款拒收/退货损耗</li>
+            <li data-i18n="idx.landed.l7">Shopify 订阅 + 第三方交易费</li>
           </ol>
-          <p>Industry rule of thumb: switch from parcel import to local 3PL stock around <strong>USD 50–100k monthly sales</strong>.</p>
+          <p data-i18n="idx.landed.p">行业经验：月销约 <strong>5–10 万美元</strong> 时，从一单一票进口切到越南本地仓。</p>
         </div>
       </div>
     </section>
 
     <section id="shopify">
-      <h2>Shopify in Vietnam — early-stage stack</h2>
+      <h2 data-i18n="idx.shopify.h2">越南 Shopify — 早期技术栈</h2>
       <div class="kpis">
-        <div class="kpi"><b>No</b><span>Shopify Payments in VN</span></div>
-        <div class="kpi"><b>+2%</b><span>Basic plan extra fee on 3rd-party checkout</span></div>
-        <div class="kpi"><b>COD</b><span>Still the most preferred method (~35%)</span></div>
-        <div class="kpi"><b>1–2d</b><span>Urban last-mile if stock is local</span></div>
+        <div class="kpi"><b>无</b><span data-i18n="idx.shopify.k1">越南没有 Shopify Payments</span></div>
+        <div class="kpi"><b>+2%</b><span data-i18n="idx.shopify.k2">Basic 套餐第三方结账加收</span></div>
+        <div class="kpi"><b>货到付款</b><span data-i18n="idx.shopify.k3">仍是最偏好支付方式（约 35%）</span></div>
+        <div class="kpi"><b>1–2 天</b><span data-i18n="idx.shopify.k4">本地有货时的市区尾程</span></div>
       </div>
       <div class="card" style="margin-top:16px">
         <table>
-          <tr><th>Layer</th><th>Use</th><th>Watch-out</th></tr>
-          <tr><td>Store</td><td>Shopify Online Store, VND, Vietnamese, phone-first theme</td><td>Desktop-first themes convert poorly (92% shop on phones)</td></tr>
-          <tr><td>Pay</td><td>VNPay official app; bank QR; manual COD</td><td>MoMo/ZaloPay are not native. Extra Shopify fee on top of PSP rates. COD must be an app or manual method.</td></tr>
-          <tr><td>Ship</td><td>GHN (volume), GHTK (cost + daily COD remittance), Viettel Post (coverage/safety), J&amp;T</td><td>Do not promise marketplace-speed delivery on CN dropship parcels</td></tr>
-          <tr><td>Sourcing</td><td>1688 / factory, not retail Taobao screenshots</td><td>Cosmetics, food, supplements need registration</td></tr>
-          <tr><td>AI (after checkout works)</td><td>Landed-cost quote, VN Q&amp;A, 1688 match, quality/fake flags</td><td>AI claims on livestream/ads fall under the new e-commerce law</td></tr>
-          <tr><td>Demand</td><td>TikTok/Shopee for discovery even if checkout is Shopify</td><td>TikTok Shop has no simple ship-from-abroad program; local entity or partner</td></tr>
+          <tr><th data-i18n="idx.shopify.th.layer">层</th><th data-i18n="idx.shopify.th.use">怎么用</th><th data-i18n="idx.shopify.th.watch">注意</th></tr>
+          <tr><td data-i18n="idx.shopify.store">店铺</td><td data-i18n="idx.shopify.store.use">Shopify 在线商店，越南盾、越南语、手机优先主题</td><td data-i18n="idx.shopify.store.w">桌面优先主题转化差（92% 用手机购物）</td></tr>
+          <tr><td data-i18n="idx.shopify.pay">支付</td><td data-i18n="idx.shopify.pay.use">VNPay 官方应用；银行 QR；手工货到付款</td><td data-i18n="idx.shopify.pay.w">MoMo/ZaloPay 非原生。Shopify 加收叠在支付公司费率上。货到付款要用应用或手工方式。</td></tr>
+          <tr><td data-i18n="idx.shopify.ship">物流</td><td data-i18n="idx.shopify.ship.use">GHN（量大）、GHTK（成本 + 每日代收对账）、越军邮（覆盖/安全）、J&amp;T</td><td data-i18n="idx.shopify.ship.w">中国直发不要承诺平台级时效</td></tr>
+          <tr><td data-i18n="idx.shopify.src">货源</td><td data-i18n="idx.shopify.src.use">1688 / 工厂，不要用淘宝零售截图当成本</td><td data-i18n="idx.shopify.src.w">化妆品、食品、保健品需注册</td></tr>
+          <tr><td data-i18n="idx.shopify.ai">AI（结账跑通后）</td><td data-i18n="idx.shopify.ai.use">落地价报价、越南语问答、1688 匹配、质量/假货提示</td><td data-i18n="idx.shopify.ai.w">直播/广告里的 AI 承诺受新电商法规制</td></tr>
+          <tr><td data-i18n="idx.shopify.demand">流量</td><td data-i18n="idx.shopify.demand.use">即使用 Shopify 结账，发现仍靠 TikTok/Shopee</td><td data-i18n="idx.shopify.demand.w">TikTok Shop 全球销售可让中国/香港主体进东南亚；本地仓转化仍更好</td></tr>
         </table>
       </div>
     </section>
 
     <section id="buyer">
-      <h2>How Vietnamese buyers actually shop</h2>
+      <h2 data-i18n="idx.buyer.h2">越南买家怎么买</h2>
       <div class="grid2">
         <div class="card">
           <ul>
-            <li>~50% shop online weekly (TGM); YouNet 62.8% among digital consumers.</li>
-            <li>92% smartphone vs 30% desktop.</li>
-            <li>Categories: clothing 63%, personal care 55%, beauty 48% (TGM).</li>
-            <li>COD preferred by 35%; BNPL <em>used</em> by 49% (usage ≠ preference).</li>
-            <li>~35% have joined livestream shopping; Gen Z uses micro-influencers and shoppertainment.</li>
-            <li>Price, speed, and easy returns sit above brand. Cross-border lose on speed/returns unless you hold VN stock.</li>
+            <li data-i18n="idx.buyer.l1">约 50% 每周网购（TGM）；YouNet 数字消费者中 62.8%。</li>
+            <li data-i18n="idx.buyer.l2">92% 用手机，桌面仅 30%。</li>
+            <li data-i18n="idx.buyer.l3">品类：服装 63%、个护 55%、美妆 48%（TGM）。</li>
+            <li data-i18n="idx.buyer.l4">货到付款偏好 35%；先买后付<strong>用过</strong>的有 49%（使用 ≠ 偏好）。</li>
+            <li data-i18n="idx.buyer.l5">约 35% 参加过直播购物；Z 世代看微网红和内容电商。</li>
+            <li data-i18n="idx.buyer.l6">价格、速度、退货高于品牌。跨境在速度/退货上输，除非越南有货。</li>
           </ul>
         </div>
         <div class="card">
-          <h3>AI web app wedge (from the chat + data)</h3>
-          <p>Buyers already find cheap China goods on Shopee/TikTok. The product only wins if it does something those apps do badly:</p>
+          <h3 data-i18n="idx.wedge.h3">AI 网页的切入点（聊天 + 数据）</h3>
+          <p data-i18n="idx.wedge.p">买家已经在 Shopee/TikTok 上找便宜中国货。产品只有做成这两家做不好的事才赢：</p>
           <ol>
-            <li>Show true VND landed price, tax included, before add-to-cart.</li>
-            <li>Filter junk/fake listings and explain quality in Vietnamese.</li>
-            <li>Offer local payment + realistic delivery windows.</li>
-            <li>Later: hold fast-movers in a VN warehouse so speed matches Shopee.</li>
+            <li data-i18n="idx.wedge.l1">加购前就展示含税的真实越南盾落地价。</li>
+            <li data-i18n="idx.wedge.l2">过滤垃圾/假货，用越南语讲清楚品质。</li>
+            <li data-i18n="idx.wedge.l3">本地支付 + 诚实的送达时间。</li>
+            <li data-i18n="idx.wedge.l4">随后把爆款放进越南仓，速度对齐 Shopee。</li>
           </ol>
         </div>
       </div>
     </section>
 
     <section id="skills">
-      <h2>Skills collected for this repo</h2>
-      <p>Open-ecosystem Shopify/dropshipping skills exist but quality is uneven. High-install ones are listed; a project-specific skill is already in <code>.cursor/skills/vn-cross-border-ecommerce</code>.</p>
+      <h2 data-i18n="idx.skills.h2">本仓库收集的技能</h2>
+      <p data-i18n="idx.skills.p">开源 Shopify/一件代发技能质量参差。下列安装量较高；项目专用技能已在 <code>.cursor/skills/vn-cross-border-ecommerce</code>。</p>
       <div class="card">
         <table>
-          <tr><th>Skill</th><th>Why it maps to the chat</th><th>Installs / source</th></tr>
-          <tr><td>vn-cross-border-ecommerce (this repo)</td><td>Landed cost, VAT/duty, Shopify VN, Law 122/2025</td><td>Written for cv-ecommerce</td></tr>
-          <tr><td>nexscope-ai/ecommerce-skills@dropshipping-product-research</td><td>SKU selection Taylor is doing now</td><td>~1.9k · skills.sh</td></tr>
-          <tr><td>nexscope-ai/ecommerce-skills@shopify-dropshipping</td><td>Shopify MVP store ops</td><td>~1.3k · skills.sh</td></tr>
-          <tr><td>Adspirer (Meta/TikTok/Google)</td><td>Paid acquisition once SKUs exist; TikTok is half the market</td><td>Already on this machine</td></tr>
-          <tr><td>conversion-tracking + CRO + copywriting</td><td>Standalone store lives or dies on checkout, not traffic</td><td>Already on this machine</td></tr>
-          <tr><td>website-seo-analytics + vercel/nextjs</td><td>Custom AI web layer after Shopify</td><td>Already on this machine</td></tr>
-          <tr><td>finsilabs/awesome-ecommerce-skills@dropshipping-integration</td><td>1688/supplier plumbing</td><td>~152 · skills.sh</td></tr>
+          <tr><th data-i18n="idx.skills.th1">技能</th><th data-i18n="idx.skills.th2">和聊天的对应</th><th data-i18n="idx.skills.th3">安装量 / 来源</th></tr>
+          <tr><td>vn-cross-border-ecommerce（本仓库）</td><td data-i18n="idx.skills.r1b">落地成本、增值税/关税、越南 Shopify、122/2025 号法律</td><td data-i18n="idx.skills.r1c">为 cv-ecommerce 编写</td></tr>
+          <tr><td>nexscope-ai/ecommerce-skills@dropshipping-product-research</td><td data-i18n="idx.skills.r2b">Taylor 正在做的选品</td><td>~1.9k · skills.sh</td></tr>
+          <tr><td>nexscope-ai/ecommerce-skills@shopify-dropshipping</td><td data-i18n="idx.skills.r3b">Shopify MVP 店铺运营</td><td>~1.3k · skills.sh</td></tr>
+          <tr><td>Adspirer（Meta/TikTok/Google）</td><td data-i18n="idx.skills.r4b">有 SKU 后做付费获客；TikTok 已占一半市场</td><td data-i18n="idx.skills.r4c">本机已有</td></tr>
+          <tr><td>conversion-tracking + CRO + copywriting</td><td data-i18n="idx.skills.r5b">独立站生死在结账，不在流量口号</td><td data-i18n="idx.skills.r4c">本机已有</td></tr>
+          <tr><td>website-seo-analytics + vercel/nextjs</td><td data-i18n="idx.skills.r6b">Shopify 之后的自定义 AI 层</td><td data-i18n="idx.skills.r4c">本机已有</td></tr>
+          <tr><td>finsilabs/awesome-ecommerce-skills@dropshipping-integration</td><td data-i18n="idx.skills.r7b">1688 / 供应商对接</td><td>~152 · skills.sh</td></tr>
         </table>
-        <p style="margin-top:12px;font-size:13px">Skipped: 1–30 install “dropshipping mastery” skills. Prefer the project skill + official Shopify/Vercel docs.</p>
+        <p style="margin-top:12px;font-size:13px" data-i18n="idx.skills.note">跳过安装量 1–30 的「dropshipping mastery」。优先用本项目技能 + 官方 Shopify/Vercel 文档。</p>
       </div>
     </section>
 
     <section id="plan">
-      <h2>Recommended next 30 days</h2>
+      <h2 data-i18n="idx.plan.h2">建议的未来 30 天</h2>
       <ol>
-        <li><strong>Pick 20 SKUs</strong> in beauty accessories, home, or fashion basics — high search, inspectable quality, no special licences.</li>
-        <li><strong>Build a landed-cost sheet</strong> (China + freight + VAT + duty if &gt;1M + last-mile + 8–12% leak). Kill SKUs that are not clearly cheaper than Shopee after that.</li>
-        <li><strong>Stand up Shopify</strong>: VND, Vietnamese, VNPay + COD, GHN or GHTK.</li>
-        <li><strong>Do not dropship everything.</strong> Pre-stock a few winners in HCMC/HN so delivery is 1–2 days.</li>
-        <li><strong>AI v0</strong>: a VN chatbot / search that explains the product and the tax-inclusive price. Leave livestream until Law 122 processes are understood.</li>
-        <li><strong>Legal</strong>: business registration path; whether the site is a “platform”; PDPD for customer data.</li>
+        <li data-i18n="idx.plan.l1"><strong>选 20 个 SKU</strong>：美妆配件、家居或基础服饰——搜索量大、品质可验、无需特殊许可。</li>
+        <li data-i18n="idx.plan.l2"><strong>做落地成本表</strong>（中国价 + 运费 + 增值税 + 超 100 万越盾关税 + 尾程 + 8–12% 损耗）。算完仍不明显比 Shopee 便宜的 SKU 杀掉。</li>
+        <li data-i18n="idx.plan.l3"><strong>搭 Shopify</strong>：越南盾、越南语、VNPay + 货到付款、GHN 或 GHTK。</li>
+        <li data-i18n="idx.plan.l4"><strong>不要全部直发。</strong>爆款预存在胡志明/河内，做到 1–2 天达。</li>
+        <li data-i18n="idx.plan.l5"><strong>AI v0</strong>：越南语问答 / 搜索，讲清含税价。直播等搞懂 122 号法律流程后再做。</li>
+        <li data-i18n="idx.plan.l6"><strong>合规</strong>：公司注册路径；站点是否算「平台」；个人数据保护法。</li>
       </ol>
     </section>
 
     <section id="sources">
-      <h2>Sources</h2>
-      <p>Full list with URLs: <a href="https://github.com/pi0099/cv-ecommerce/blob/main/data/sources.md">data/sources.md</a>. Fee and shipping comparison: <a href="compare.html">compare.html</a>. Primary: Metric via VCCI/Hanoi Times; VECOM via VnEconomy; vnmarketinsights (market + cross-border tax); TGM Research 2025; Law 122/2025/QH15; Decision 01/2025/QĐ-TTg; Shopify Pricing; Shopee Uni; TikTok Shop University; GHN/GHTK rate cards.</p>
+      <h2 data-i18n="idx.sources.h2">来源</h2>
+      <p data-i18n="idx.sources.p">完整链接：<a href="https://github.com/pi0099/cv-ecommerce/blob/main/data/sources.md">data/sources.md</a>。费用与运费对比：<a href="compare.html">compare.html</a>。主要来源：Metric（VCCI / 河内时报）；VECOM（VnEconomy）；vnmarketinsights；TGM 2025；电商法 122/2025/QH15；第 01/2025/QĐ-TTg 号决定；Shopify Pricing；Shopee Uni；TikTok Shop University；GHN/GHTK 价卡。</p>
     </section>
   </main>
-  <footer>
-    Collected 8 Nov 2026 for internal planning. Tax and fee tables change; re-check before pricing live SKUs. Not legal advice.
-  </footer>
+  <footer data-i18n="idx.footer">内部规划，采集于 2026 年 11 月 8 日。税率与费率会变，上架前请复核。不构成法律意见。</footer>
+  <script src="i18n-en.js"></script>
+  <script src="i18n.js"></script>
 </body>
 </html>

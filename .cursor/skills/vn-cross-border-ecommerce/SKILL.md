@@ -8,7 +8,7 @@ description: >-
 
 # Vietnam cross-border e-commerce (cv-ecommerce)
 
-Taylor’s brief: AI-powered **web** app (not mobile) that helps Vietnamese buyers get cheaper Chinese products. Early stage = **Shopify**, then custom AI layer. SEA later; Vietnam first.
+Taylor’s brief: AI-powered **web** app (not mobile) that helps Vietnamese buyers get cheaper Chinese products. Early stage = **Shopify**, then custom AI layer. SEA later; Vietnam first. Internal GitHub Pages briefing defaults to **Simplified Chinese** (EN toggle).
 
 ## Do this first
 

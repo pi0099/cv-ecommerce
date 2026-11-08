@@ -6,7 +6,9 @@ Early stage: **Shopify**. Later: custom AI layer (landed-cost quotes, Vietnamese
 
 ## Briefing
 
-Interactive report (GitHub Pages):
+GitHub Pages is **Chinese by default**, with an EN toggle (choice saved in the browser).
+
+Interactive report:
 
 - Market briefing: **https://pi0099.github.io/cv-ecommerce/**
 - Fees & shipping comparison: **https://pi0099.github.io/cv-ecommerce/compare.html**

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shopify vs Shopee vs TikTok Shop — fees &amp; shipping</title>
-  <meta name="description" content="Sourced comparison of platform fees and shipping for overseas buying into Vietnam: Shopify, Shopee, TikTok Shop." />
+  <title>Shopify vs Shopee vs TikTok Shop — 平台费与运费</title>
+  <meta name="description" content="越南买海外货：Shopify、Shopee、TikTok Shop 的平台费与运费对比，每条都注明来源。" data-i18n-attr="content:cmp.desc" />
   <style>
     :root {
       --bg: #0f1419; --panel: #171e27; --line: #2a3542; --text: #e8eef4;
@@ -12,19 +12,22 @@
       --bad: #e06b6b; --shopee: #ee4d2d;
     }
     * { box-sizing: border-box; }
-    html, body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, sans-serif; }
+    html, body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif; }
     a { color: var(--accent); }
     header, nav, main, footer { max-width: 1100px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
     header { padding-top: 28px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
-    .kicker { color: var(--muted); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
-    h1 { font-size: 26px; line-height: 1.2; margin: 8px 0 10px; font-weight: 600; }
+    .kicker { color: var(--muted); font-size: 12px; letter-spacing: .06em; }
+    h1 { font-size: 26px; line-height: 1.25; margin: 8px 0 10px; font-weight: 600; }
     h2 { font-size: 20px; margin: 0 0 10px; font-weight: 600; }
     h3 { font-size: 15px; margin: 0 0 8px; font-weight: 600; }
     p { color: var(--muted); margin: 0 0 12px; }
     .lead { color: var(--text); max-width: 760px; }
-    nav { display: flex; flex-wrap: wrap; gap: 10px 16px; padding: 12px 20px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--bg); z-index: 2; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; padding: 12px 20px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--bg); z-index: 2; }
     nav a { color: var(--muted); text-decoration: none; font-size: 13px; }
     nav a:hover, nav a.on { color: var(--text); }
+    .lang { margin-left: auto; display: flex; gap: 6px; }
+    .lang button { background: transparent; border: 1px solid var(--line); color: var(--muted); padding: 3px 10px; cursor: pointer; font-size: 12px; }
+    .lang button.active { color: var(--text); border-color: var(--accent); }
     main { padding-top: 24px; padding-bottom: 72px; }
     section { margin: 40px 0; }
     .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
@@ -40,9 +43,8 @@
     .src { font-size: 11px; color: var(--muted); }
     .src a { color: var(--muted); }
     .tag { display: inline-block; font-size: 11px; padding: 1px 6px; border: 1px solid var(--line); color: var(--muted); }
-    .tag.ok { color: var(--good); border-color: #2e5f4c; }
     .tag.warn { color: var(--warn); border-color: #6b5420; }
-    .bar { display: grid; grid-template-columns: 120px 1fr 70px; gap: 8px; align-items: center; margin: 8px 0; font-size: 13px; }
+    .bar { display: grid; grid-template-columns: 140px 1fr 90px; gap: 8px; align-items: center; margin: 8px 0; font-size: 13px; }
     .track { background: #243040; height: 12px; }
     .fill { height: 12px; background: var(--accent); }
     .fill.s { background: var(--shopee); }
@@ -56,234 +58,239 @@
     @media (max-width: 860px) {
       .kpis, .grid2, .grid3 { grid-template-columns: 1fr; }
       h1 { font-size: 22px; }
+      .lang { margin-left: 0; width: 100%; }
     }
   </style>
 </head>
-<body>
+<body data-title-key="cmp.title">
   <header>
-    <div class="kicker">cv-ecommerce · comparison · rates as of Nov 2026</div>
-    <h1>Shopify vs Shopee vs TikTok Shop: overseas buy, platform fee, shipping</h1>
-    <p class="lead">Same buyer job — get a China-origin product into Vietnam — three different machines. Every number below is sourced. Category rates move often; treat Seller Center as final.</p>
+    <div class="kicker" data-i18n="cmp.kicker">cv-ecommerce · 对比 · 费率截至 2026 年 11 月</div>
+    <h1 data-i18n="cmp.h1">Shopify vs Shopee vs TikTok Shop：买海外货、平台费、运费</h1>
+    <p class="lead" data-i18n="cmp.lead">同一件事——把中国货送到越南买家手里——三套完全不同的机器。下面每个数字都有来源。类目费率常改，以卖家中心为准。</p>
   </header>
   <nav>
-    <a href="index.html">Market briefing</a>
-    <a class="on" href="compare.html">Fees &amp; shipping</a>
-    <a href="#models">Models</a>
-    <a href="#fees">Platform fees</a>
-    <a href="#ship">Shipping</a>
-    <a href="#example">Worked example</a>
-    <a href="#sources">Sources</a>
+    <a href="index.html" data-i18n="nav.briefing">市场简报</a>
+    <a class="on" href="compare.html" data-i18n="nav.compare">费用与运费</a>
+    <a href="#models" data-i18n="nav.models">模式</a>
+    <a href="#fees" data-i18n="nav.fees">平台费</a>
+    <a href="#ship" data-i18n="nav.ship">运费</a>
+    <a href="#example" data-i18n="nav.example">测算</a>
+    <a href="#sources" data-i18n="nav.sources">来源</a>
+    <div class="lang" role="group" aria-label="语言">
+      <button type="button" data-lang-btn="zh" class="active">中文</button>
+      <button type="button" data-lang-btn="en">EN</button>
+    </div>
   </nav>
   <main>
     <section id="models">
-      <h2>They all let a VN buyer buy overseas. They are not the same product.</h2>
+      <h2 data-i18n="cmp.models.h2">三者都让越南买家买海外货。但不是同一种产品。</h2>
       <div class="grid3">
         <div class="card">
           <h3>Shopee</h3>
-          <p>Marketplace. Buyer already in the app. Overseas shops labeled <strong>Hàng quốc tế</strong>. China/HK sellers join via shopee.cn; SLS to VN; last-mile SPX.</p>
-          <p class="src">Buyer help: international 7–15 days. <a href="https://help.shopee.vn/portal/4/article/79556">Shopee Help 79556</a>. CB seller channel: <a href="https://shopee.cn/seller">shopee.cn/seller</a>.</p>
+          <p data-i18n="cmp.shopee.p">电商平台。买家已在 App 里。海外店标 <strong>Hàng quốc tế</strong>。中国大陆/香港卖家走 shopee.cn；SLS 进越；尾程 SPX。</p>
+          <p class="src" data-i18n="cmp.shopee.src">买家帮助：国际件 7–15 天。<a href="https://help.shopee.vn/portal/4/article/79556">Shopee Help 79556</a>。跨境入驻：<a href="https://shopee.cn/seller">shopee.cn/seller</a>。</p>
         </div>
         <div class="card">
           <h3>TikTok Shop</h3>
-          <p>Content feed with checkout. CN/HK POP can target SEA including VN via Global Selling. Korea→VN CB lane announced live Aug 2026. Local-stock shops still convert better.</p>
-          <p class="src">Global Selling SEA (SG, MY, TH, VN, PH): <a href="https://seller.tiktokshopglobalselling.com/account/register">seller.tiktokshopglobalselling.com</a>. Korea lane: <a href="https://uptik.com.vn/en/blog/vietnam-tiktok-shop-cross-border-official-launch-korea-2026">UpTik 2026</a>.</p>
+          <p data-i18n="cmp.tt.p">内容信息流带结账。中国大陆/香港 POP 可通过全球销售覆盖含越南的东南亚。韩国→越南跨境通道 2026 年 8 月开通。本地仓店铺转化仍更好。</p>
+          <p class="src" data-i18n="cmp.tt.src">全球销售东南亚（新马泰越菲）：<a href="https://seller.tiktokshopglobalselling.com/account/register">seller.tiktokshopglobalselling.com</a>。韩国通道：<a href="https://uptik.com.vn/en/blog/vietnam-tiktok-shop-cross-border-official-launch-korea-2026">UpTik 2026</a>。</p>
         </div>
         <div class="card">
           <h3>Shopify</h3>
-          <p>Your store, not a mall of overseas shops. Buyer only arrives if you pay for traffic. You are the importer. Shopify Payments is <strong>not</strong> in Vietnam, so every card/wallet checkout is a third-party PSP.</p>
-          <p class="src">Payments availability: <a href="https://www.shopify.com/vn/payment-gateways?country=vn">shopify.com/vn/payment-gateways</a>. Third-party fees: <a href="https://www.shopify.com/pricing">shopify.com/pricing</a>.</p>
+          <p data-i18n="cmp.sfy.p">你的独立站，不是海外店商场。买家只会在你买流量后出现。你是进口商。越南<strong>没有</strong> Shopify Payments，卡/钱包结账都走第三方支付。</p>
+          <p class="src" data-i18n="cmp.sfy.src">支付可用性：<a href="https://www.shopify.com/vn/payment-gateways?country=vn">shopify.com/vn/payment-gateways</a>。第三方费率：<a href="https://www.shopify.com/pricing">shopify.com/pricing</a>。</p>
         </div>
       </div>
     </section>
 
     <section id="fees">
-      <h2>Platform fees (seller take-rate)</h2>
-      <p>Marketplace “commission” is a stack, not one number. Shopee and TikTok both charge a category % <em>plus</em> a 6% transaction fee <em>plus</em> 3,000₫ per delivered order. Shopify charges a subscription plus 2% only when a third-party PSP is used — <strong>not</strong> on manual COD.</p>
+      <h2 data-i18n="cmp.fees.h2">平台费（卖家抽成）</h2>
+      <p data-i18n="cmp.fees.p">平台「佣金」是一叠，不是一个数。Shopee 和 TikTok 都是类目百分比 <em>加</em> 6% 交易费 <em>加</em> 每单成交 3,000₫。Shopify 是订阅费，第三方支付再加 2%——<strong>手工货到付款不加</strong>。</p>
       <div class="scroll card">
         <table>
           <tr>
-            <th>Fee</th>
-            <th>Shopee VN</th>
-            <th>TikTok Shop VN</th>
-            <th>Shopify (VN merchant)</th>
+            <th data-i18n="cmp.fees.th">费用</th>
+            <th data-i18n="cmp.fees.th.s">Shopee 越南</th>
+            <th data-i18n="cmp.fees.th.t">TikTok Shop 越南</th>
+            <th data-i18n="cmp.fees.th.sh">Shopify（越南商家）</th>
           </tr>
           <tr>
-            <td>Subscription</td>
-            <td>None (deposit / new-seller rules instead)</td>
-            <td>None (deposit by category)</td>
-            <td>Basic $29/mo yearly or $39/mo monthly; Grow $89 / $105; Advanced $359 / $399; Plus from $2,300. <span class="src"><a href="https://www.shopify.com/pricing">Shopify Pricing</a>, retrieved 8 Nov 2026</span></td>
+            <td data-i18n="cmp.fees.sub">订阅</td>
+            <td data-i18n="cmp.fees.sub.s">无（保证金 / 新卖家规则）</td>
+            <td data-i18n="cmp.fees.sub.t">无（按类目保证金）</td>
+            <td data-i18n="cmp.fees.sub.sh">Basic 年付 $29/月或月付 $39；Grow $89 / $105；Advanced $359 / $399；Plus 起 $2,300。<span class="src"><a href="https://www.shopify.com/pricing">Shopify Pricing</a>，2026-11-08 查阅</span></td>
           </tr>
           <tr>
-            <td>Category commission / fixed fee</td>
-            <td>Non-Mall <strong>1.5–17%</strong> (from 23 May 2026). Mall <strong>1.5–20.8%</strong> (Mall table 4 Oct 2026). Beauty serum sample <strong>17%</strong> / Mall 20.8%. Phones as low as 2%. New non-Mall: no fixed fee 30 days. <span class="src">Official overview <a href="https://banhang.shopee.vn/edu/article/25329">Shopee Uni 25329</a>; category compilation citing Shopee PDFs <a href="https://sellerfee.app/en/shopee/vietnam/">sellerfee.app</a> (verified 26 Oct 2026)</span></td>
-            <td>By category. Default <strong>14%</strong> standard / <strong>16%</strong> Mall (from 3 Jul / 3 Aug 2026). Beauty Mall up to <strong>19.8%</strong>. Fashion Mall ~16–17.1%. <span class="src"><a href="https://news.laodong.vn/kinh-doanh/tiktok-shop-tang-phi-tu-hom-nay-co-nganh-hang-chiu-phi-gan-20-1745104.ldo">Lao Động 3 Aug 2026</a>; category ranges <a href="https://adtek.agency/en/tools/shopee-tiktok-fee-calculator/">Adtek Nov 2026</a> compiled from Seller Center</span></td>
-            <td>None</td>
+            <td data-i18n="cmp.fees.cat">类目佣金 / 固定费</td>
+            <td data-i18n="cmp.fees.cat.s">非 Mall <strong>1.5–17%</strong>（2026-05-23 起）。Mall <strong>1.5–20.8%</strong>（Mall 表 2026-10-04）。美妆精华样本 <strong>17%</strong> / Mall 20.8%。手机低至 2%。新非 Mall：上架后 30 天免固定费。<span class="src">官方总览 <a href="https://banhang.shopee.vn/edu/article/25329">Shopee Uni 25329</a>；类目汇编引自 Shopee PDF <a href="https://sellerfee.app/en/shopee/vietnam/">sellerfee.app</a>（2026-10-26 核对）</span></td>
+            <td data-i18n="cmp.fees.cat.t">按类目。默认标准店 <strong>14%</strong> / Mall <strong>16%</strong>（2026-07-03 / 08-03 起）。美妆 Mall 最高约 <strong>19.8%</strong>。服饰 Mall 约 16–17.1%。<span class="src"><a href="https://news.laodong.vn/kinh-doanh/tiktok-shop-tang-phi-tu-hom-nay-co-nganh-hang-chiu-phi-gan-20-1745104.ldo">劳动报 2026-08-03</a>；类目区间 <a href="https://adtek.agency/en/tools/shopee-tiktok-fee-calculator/">Adtek 2026-11</a> 整理自卖家中心</span></td>
+            <td data-i18n="cmp.fees.none">无</td>
           </tr>
           <tr>
-            <td>Transaction / payment processing</td>
-            <td><strong>6%</strong> all methods including COD, on item + buyer-paid shipping − seller promos. <span class="src"><a href="https://banhang.shopee.vn/edu/article/25329">Shopee Uni 25329</a></span></td>
-            <td><strong>6%</strong> on orders created after 00:00 9 May 2026. Formula: (customer payment + platform discount − refund) × 6%. Includes buyer shipping. Inclusive of VN tax unless company tax code verified. Ads take-rate can cut 0–1.5 pts from 21 Oct 2026. <span class="src"><a href="https://seller-vn.tiktok.com/university/essay?knowledge_id=753295858337537&amp;lang=en">TikTok Shop University, updated 13 Oct 2026</a></span></td>
-            <td>Third-party fee <strong>2% / 1% / 0.6% / 0.2%</strong> by plan, <em>on top of</em> VNPay/PSP MDR. Formula: [(products − discounts) + tax + shipping] × rate. <strong>0%</strong> Shopify fee on manual COD / bank transfer. Shopify Payments card rates do not apply in VN. <span class="src"><a href="https://www.shopify.com/pricing">Pricing</a>; <a href="https://help.shopify.com/en/manual/your-account/manage-billing/billing-charges/types-of-charges/third-party-charges/third-party-transaction-fees">Help: third-party fees</a></span></td>
+            <td data-i18n="cmp.fees.txn">交易 / 支付处理</td>
+            <td data-i18n="cmp.fees.txn.s"><strong>6%</strong>，含货到付款；基数=商品+买家付运费−卖家优惠。<span class="src"><a href="https://banhang.shopee.vn/edu/article/25329">Shopee Uni 25329</a></span></td>
+            <td data-i18n="cmp.fees.txn.t"><strong>6%</strong>，适用于 2026-05-09 00:00 之后创建的订单。公式：（买家实付 + 平台优惠 − 退款）× 6%。含买家运费。含越南税，除非企业税号已核验。广告占比达标可从 2026-10-21 起减免 0–1.5 个百分点。<span class="src"><a href="https://seller-vn.tiktok.com/university/essay?knowledge_id=753295858337537&amp;lang=en">TikTok Shop University，2026-10-13 更新</a></span></td>
+            <td data-i18n="cmp.fees.txn.sh">第三方费按套餐 <strong>2% / 1% / 0.6% / 0.2%</strong>，<em>叠在</em> VNPay/支付公司费率上。公式：[(商品 − 折扣) + 税 + 运费] × 费率。手工货到付款 / 银行转账 <strong>0%</strong> Shopify 费。越南不适用 Shopify Payments 卡费率。<span class="src"><a href="https://www.shopify.com/pricing">Pricing</a>；<a href="https://help.shopify.com/en/manual/your-account/manage-billing/billing-charges/types-of-charges/third-party-charges/third-party-transaction-fees">帮助：第三方费</a></span></td>
           </tr>
           <tr>
-            <td>Per delivered order</td>
-            <td><strong>3,000₫</strong> infrastructure. Withdrawal 10,800₫/time. <span class="src"><a href="https://banhang.shopee.vn/edu/article/25329">Shopee Uni 25329</a></span></td>
-            <td><strong>3,000₫</strong> order processing. <span class="src"><a href="https://news.laodong.vn/kinh-doanh/tiktok-shop-tang-phi-tu-hom-nay-co-nganh-hang-chiu-phi-gan-20-1745104.ldo">Lao Động</a></span></td>
-            <td>None from Shopify. PSP may have a per-txn fee (contract, not public).</td>
+            <td data-i18n="cmp.fees.per">每单成交</td>
+            <td data-i18n="cmp.fees.per.s"><strong>3,000₫</strong> 基础设施费。提现 10,800₫/次。<span class="src"><a href="https://banhang.shopee.vn/edu/article/25329">Shopee Uni 25329</a></span></td>
+            <td data-i18n="cmp.fees.per.t"><strong>3,000₫</strong> 订单处理费。<span class="src"><a href="https://news.laodong.vn/kinh-doanh/tiktok-shop-tang-phi-tu-hom-nay-co-nganh-hang-chiu-phi-gan-20-1745104.ldo">劳动报</a></span></td>
+            <td data-i18n="cmp.fees.per.sh">Shopify 不收。支付公司可能有单笔费（合同价，非公开统一价）。</td>
           </tr>
           <tr>
-            <td>Optional conversion programs</td>
-            <td>Voucher Xtra <strong>5.5%</strong> of item, cap 50,000₫ (from 23 May 2026). PiShip 2,700₫/order. <span class="src"><a href="https://banhang.shopee.vn/edu/article/25329">Shopee Uni 25329</a></span></td>
-            <td>Freeship Extra about <strong>4.5–5.5%</strong> of item (optional). Affiliate/KOC extra. <span class="src">Industry round-ups citing Seller Center: <a href="https://eimskip.vn/phi-san-tiktok-shop">eimskip.vn</a>; <a href="https://adtek.agency/en/tools/shopee-tiktok-fee-calculator/">Adtek</a></span></td>
-            <td>Shopify apps billed separately. Ads are 100% on you (Meta/TikTok/Google).</td>
+            <td data-i18n="cmp.fees.opt">可选转化套餐</td>
+            <td data-i18n="cmp.fees.opt.s">Voucher Xtra 商品价 <strong>5.5%</strong>，封顶 50,000₫（2026-05-23 起）。PiShip 2,700₫/单。<span class="src"><a href="https://banhang.shopee.vn/edu/article/25329">Shopee Uni 25329</a></span></td>
+            <td data-i18n="cmp.fees.opt.t">Freeship Extra 约商品价 <strong>4.5–5.5%</strong>（可选）。联盟/达人另计。<span class="src">整理自卖家中心：<a href="https://eimskip.vn/phi-san-tiktok-shop">eimskip.vn</a>；<a href="https://adtek.agency/en/tools/shopee-tiktok-fee-calculator/">Adtek</a></span></td>
+            <td data-i18n="cmp.fees.opt.sh">Shopify 应用另计。广告 100% 自己出（Meta/TikTok/Google）。</td>
           </tr>
           <tr>
-            <td>Tax withheld (household / individual)</td>
-            <td>1% VAT + 0.5% PIT on goods from 1 Jul 2025. Companies file themselves. <span class="src">Shopee Uni via <a href="https://sellerfee.app/en/shopee/vietnam/">sellerfee.app source list</a>; Decree 117/2025 / 252/2026</span></td>
-            <td>Same 1.5% household withholding on marketplaces. <span class="src"><a href="https://adtek.agency/en/tools/shopee-tiktok-fee-calculator/">Adtek</a></span></td>
-            <td>You file. No marketplace withholding.</td>
+            <td data-i18n="cmp.fees.tax">代扣税（个人 / 户）</td>
+            <td data-i18n="cmp.fees.tax.s">商品 1% 增值税 + 0.5% 个税，2025-07-01 起。公司自行申报。<span class="src">Shopee Uni 见 <a href="https://sellerfee.app/en/shopee/vietnam/">sellerfee.app 来源表</a>；117/2025、252/2026 号法令</span></td>
+            <td data-i18n="cmp.fees.tax.t">平台同样对个人户代扣 1.5%。<span class="src"><a href="https://adtek.agency/en/tools/shopee-tiktok-fee-calculator/">Adtek</a></span></td>
+            <td data-i18n="cmp.fees.tax.sh">自己申报。无平台代扣。</td>
           </tr>
         </table>
       </div>
 
-      <h3 style="margin-top:20px">Mandatory take-rate on a 199,000₫ beauty serum (local listing, no optional programs, company seller, no buyer shipping in the fee base)</h3>
-      <p class="note">This is an illustration using published category rates. Shopee serum 17% is the official non-Mall cell compiled on sellerfee.app from Shopee’s 23 May 2026 PDF. TikTok uses the 14% default for unlisted level-3 cats (Lao Động / Adtek). Shopify uses Basic 2% third-party (VNPay path), not COD.</p>
+      <h3 style="margin-top:20px" data-i18n="cmp.take.h3">199,000₫ 美妆精华的强制抽成（本地上架、无可选套餐、公司卖家、交易费基数不含买家运费）</h3>
+      <p class="note" data-i18n="cmp.take.note">按已公布类目费率的测算。Shopee 精华 17% 是 sellerfee.app 从 Shopee 2026-05-23 PDF 摘的非 Mall 格子。TikTok 用未列三级类目默认 14%（劳动报 / Adtek）。Shopify 用 Basic 第三方 2%（VNPay 路径），不是货到付款。</p>
       <div class="bar"><span>Shopee 24.5%</span><div class="track"><div class="fill s" style="width:24.5%"></div></div><span>48,770₫</span></div>
       <div class="bar"><span>TikTok 21.5%</span><div class="track"><div class="fill t" style="width:21.5%"></div></div><span>42,800₫</span></div>
-      <div class="bar"><span>Shopify VNPay 2%</span><div class="track"><div class="fill sh" style="width:2%"></div></div><span>3,980₫ + $29–39/mo</span></div>
-      <div class="bar"><span>Shopify COD 0%</span><div class="track"><div class="fill sh" style="width:0.4%"></div></div><span>0₫ + $29–39/mo</span></div>
-      <p class="src">Shopee 48,770₫ = 17%×199,000 + 6%×199,000 + 3,000. Same worked example as <a href="https://sellerfee.app/en/shopee/vietnam/">sellerfee.app Example 1</a>. TikTok 42,800₫ = 14%×199,000 + 6%×199,000 + 3,000. Shopify 2%: <a href="https://www.shopify.com/pricing">Pricing</a>. COD exemption: <a href="https://help.shopify.com/en/manual/your-account/manage-billing/billing-charges/types-of-charges/third-party-charges/third-party-transaction-fees">Help Center</a>.</p>
-      <p class="note">Add Voucher Xtra or Freeship Extra or KOC and marketplace take-rate jumps toward <strong>30%+</strong>. Lao Động’s Mall example on a 100,000₫ item: 16% + 6% + 3,000₫ ≈ 25% before ads.</p>
+      <div class="bar"><span>Shopify VNPay 2%</span><div class="track"><div class="fill sh" style="width:2%"></div></div><span>3,980₫ + $29–39/月</span></div>
+      <div class="bar"><span>Shopify 货到付款 0%</span><div class="track"><div class="fill sh" style="width:0.4%"></div></div><span>0₫ + $29–39/月</span></div>
+      <p class="src" data-i18n="cmp.take.src">Shopee 48,770₫ = 17%×199,000 + 6%×199,000 + 3,000。与 <a href="https://sellerfee.app/en/shopee/vietnam/">sellerfee.app 例 1</a> 相同。TikTok 42,800₫ = 14%×199,000 + 6%×199,000 + 3,000。Shopify 2%：<a href="https://www.shopify.com/pricing">Pricing</a>。货到付款免 Shopify 费：<a href="https://help.shopify.com/en/manual/your-account/manage-billing/billing-charges/types-of-charges/third-party-charges/third-party-transaction-fees">Help Center</a>。</p>
+      <p class="note" data-i18n="cmp.take.note2">加上 Voucher Xtra、Freeship Extra 或达人，平台抽成可冲到 <strong>30%+</strong>。劳动报 Mall 例：10 万₫ 商品，16% + 6% + 3,000₫ ≈ 广告前 25%。</p>
     </section>
 
     <section id="ship">
-      <h2>Shipping fees</h2>
-      <p>Split two layers: <strong>last-mile inside Vietnam</strong> (all three can use similar carriers) vs <strong>China → VN international</strong> (Shopee SLS / TikTok CB / your forwarder).</p>
+      <h2 data-i18n="cmp.ship.h2">运费</h2>
+      <p data-i18n="cmp.ship.p">分两层：<strong>越南境内尾程</strong>（三家都可用同类承运商）vs <strong>中国→越南国际段</strong>（Shopee SLS / TikTok 跨境 / 你的货代）。</p>
 
-      <h3>Who pays last-mile?</h3>
+      <h3 data-i18n="cmp.ship.who.h3">尾程谁付钱？</h3>
       <div class="scroll card">
         <table>
           <tr><th></th><th>Shopee</th><th>TikTok Shop</th><th>Shopify</th></tr>
           <tr>
-            <td>Default last-mile payer</td>
-            <td>Buyer. Listing price does not include ship-to-buyer. Fee shown on PDP and checkout. Seller pays only the gap if real pack weight/size &gt; declared. <span class="src"><a href="https://banhang.shopee.vn/edu/article/13246">Shopee Uni 13246</a></span></td>
-            <td>Seller-connected logistics; chargeable weight = max(actual, L×W×H/6000). Pickup address used is the LSP’s actual pickup. Buyer may see a subsidized rate if Freeship Extra is on (seller then pays 4.5–5.5%). <span class="src"><a href="https://nhanh.vn/tong-hop-cac-loai-phi-cua-nha-ban-hang-tren-tiktok-shop-n118588.html">Nhanh.vn summary of Seller Center rules</a>; Freeship Extra: Adtek / eimskip</span></td>
-            <td>You set rates. GHN/GHTK contract. You can charge the buyer or absorb. Shopify does not publish a VN rate card. The “up to 87% off shipping labels” on Shopify Pricing is not GHN/GHTK. <span class="src"><a href="https://www.shopify.com/pricing">Shopify Pricing</a></span></td>
+            <td data-i18n="cmp.ship.who.row">默认尾程付款人</td>
+            <td data-i18n="cmp.ship.who.s">买家。标价不含运到买家。商品页和结账显示运费。仅当实重/尺寸大于申报时卖家补差。<span class="src"><a href="https://banhang.shopee.vn/edu/article/13246">Shopee Uni 13246</a></span></td>
+            <td data-i18n="cmp.ship.who.t">卖家对接物流；计费重量 = max(实重, 长×宽×高/6000)。以承运商实际揽收地址计。开通 Freeship Extra 时买家看到补贴价（卖家付 4.5–5.5%）。<span class="src"><a href="https://nhanh.vn/tong-hop-cac-loai-phi-cua-nha-ban-hang-tren-tiktok-shop-n118588.html">Nhanh.vn 对卖家中心规则的归纳</a>；Freeship Extra：Adtek / eimskip</span></td>
+            <td data-i18n="cmp.ship.who.sh">你自己设价。GHN/GHTK 合同。可向买家收或自己承担。Shopify 不公布越南价卡。Pricing 上「运费标签最高 87 折」不是 GHN/GHTK。<span class="src"><a href="https://www.shopify.com/pricing">Shopify Pricing</a></span></td>
           </tr>
           <tr>
-            <td>Domestic SLA</td>
-            <td>Hỏa tốc 1–2h; Nhanh 1–4 days; Tiết kiệm 2–6 days; bulky 2–5 days. Chargeable = max(actual, volumetric /6000). Carriers: SPX, GHN, Viettel Post, VNPost, Grab, etc. <span class="src"><a href="https://help.shopee.vn/portal/4/article/79534">Shopee Help 79534</a></span></td>
-            <td>Urban 1–2 days when stock is local (same last-mile market as GHN/GHTK/J&amp;T). Extra <strong>logistics operating fee</strong> on parcels &gt;10kg, seller-paid, 3,000–65,000₫ from 12 Oct 2026, not shown to buyer, not refunded on returns. <span class="src"><a href="https://vtcnews.vn/tiktok-shop-sap-thu-them-phi-van-hanh-logistics-nguoi-mua-co-bi-anh-huong-ar1041515.html">VTC News</a></span></td>
-            <td>Whatever the carrier SLA is. GHN states 1 day typical / max 5 days on its published bảng giá. <span class="src"><a href="https://ghn.vn/pages/dich-vu-giao-hang">ghn.vn</a></span></td>
+            <td data-i18n="cmp.ship.sla">境内时效</td>
+            <td data-i18n="cmp.ship.sla.s">火速 1–2 小时；快速 1–4 天；经济 2–6 天；大件 2–5 天。计费 = max(实重, 体积重/6000)。承运商：SPX、GHN、越军邮、VNPost、Grab 等。<span class="src"><a href="https://help.shopee.vn/portal/4/article/79534">Shopee Help 79534</a></span></td>
+            <td data-i18n="cmp.ship.sla.t">本地有货时市区 1–2 天（与 GHN/GHTK/J&amp;T 同一尾程市场）。<strong>超 10kg 物流操作费</strong>由卖家付，3,000–65,000₫，2026-10-12 起，不显示给买家，退货不退该费。<span class="src"><a href="https://vtcnews.vn/tiktok-shop-sap-thu-them-phi-van-hanh-logistics-nguoi-mua-co-bi-anh-huong-ar1041515.html">VTC News</a></span></td>
+            <td data-i18n="cmp.ship.sla.sh">看承运商时效。GHN 公布价卡写典型 1 天 / 最长 5 天。<span class="src"><a href="https://ghn.vn/pages/dich-vu-giao-hang">ghn.vn</a></span></td>
           </tr>
           <tr>
-            <td>International (China/overseas → VN)</td>
-            <td>Express International or Standard International. Typical <strong>7–15 days</strong> from payment, excluding holidays; customs can stretch it. Last-mile in VN: SPX. Buyer sees estimated tax at checkout. <span class="src"><a href="https://help.shopee.vn/portal/4/article/79556">79556</a>; <a href="https://help.shopee.vn/portal/4/article/79651">79651</a>; shop quốc tế explainer <a href="https://shopee.vn/blog/shop-quoc-te-tren-shopee-la-gi/">Shopee Blog</a></span></td>
-            <td>CB POP: ship from origin warehouse into VN Shop. Korea→VN lane described as no local entity required (Aug 2026). No single public VND/kg table; Seller Center / TSP quote. <span class="src"><a href="https://uptik.com.vn/en/blog/vietnam-tiktok-shop-cross-border-official-launch-korea-2026">UpTik</a></span></td>
-            <td>Your forwarder. Same VAT-on-every-parcel rule (18 Feb 2025). Industry rule of thumb: CB landed cost often 30–50% above local stock; 7–14 days. <span class="src"><a href="https://vnmarketinsights.com/guides/cross-border-ecommerce-into-vietnam/">vnmarketinsights guide, 11 Oct 2026</a></span></td>
+            <td data-i18n="cmp.ship.int">国际（中国/海外 → 越南）</td>
+            <td data-i18n="cmp.ship.int.s">国际快速或国际标准。付款后通常 <strong>7–15 天</strong>（不含节假日）；海关可能拉长。越南尾程 SPX。结账显示预估税。<span class="src"><a href="https://help.shopee.vn/portal/4/article/79556">79556</a>；<a href="https://help.shopee.vn/portal/4/article/79651">79651</a>；国际店说明 <a href="https://shopee.vn/blog/shop-quoc-te-tren-shopee-la-gi/">Shopee Blog</a></span></td>
+            <td data-i18n="cmp.ship.int.t">跨境 POP：从原产仓发进越南小店。韩国→越南通道描述为无需本地公司（2026 年 8 月）。无公开统一 ₫/kg 表，看卖家中心 / 服务商报价。<span class="src"><a href="https://uptik.com.vn/en/blog/vietnam-tiktok-shop-cross-border-official-launch-korea-2026">UpTik</a></span></td>
+            <td data-i18n="cmp.ship.int.sh">你的货代。同样适用 2025-02-18 起「每票快递都缴增值税」。行业经验：跨境落地成本常比本地仓高 30–50%；7–14 天。<span class="src"><a href="https://vnmarketinsights.com/guides/cross-border-ecommerce-into-vietnam/">vnmarketinsights 指南，2026-10-11</a></span></td>
           </tr>
         </table>
       </div>
 
-      <h3 style="margin-top:20px">Published last-mile rate cards you can actually use on Shopify</h3>
-      <p>Shopee/TikTok checkout rates are dynamic (voucher, zone, weight). For a DTC store the comparable public cards are GHN and GHTK.</p>
+      <h3 style="margin-top:20px" data-i18n="cmp.lm.h3">Shopify 能直接用的公开尾程价卡</h3>
+      <p data-i18n="cmp.lm.p">Shopee/TikTok 结账运费是动态的（券、区域、重量）。独立站可对照的公开价卡是 GHN 和 GHTK。</p>
       <div class="kpis">
-        <div class="kpi"><b>21,000₫</b><span>GHN HN/HCMC inner, first 0–3kg</span></div>
-        <div class="kpi"><b>15,500₫</b><span>GHN other provinces inner, 0–3kg</span></div>
-        <div class="kpi"><b>22,000₫</b><span>GHTK HN/HCMC phường nội tỉnh, up to 3kg</span></div>
+        <div class="kpi"><b>21,000₫</b><span data-i18n="cmp.lm.k1">GHN 河内/胡志明市内，首重 0–3kg</span></div>
+        <div class="kpi"><b>15,500₫</b><span data-i18n="cmp.lm.k2">GHN 其他省市内，0–3kg</span></div>
+        <div class="kpi"><b>22,000₫</b><span data-i18n="cmp.lm.k3">GHTK 河内/胡志明坊级同省，至 3kg</span></div>
       </div>
       <div class="grid2" style="margin-top:12px">
         <div class="card">
-          <h3>GHN (public, no contract)</h3>
+          <h3 data-i18n="cmp.ghn.h3">GHN（公开价，无合同）</h3>
           <table>
-            <tr><th>Lane</th><th>Inner</th><th>Outer</th></tr>
-            <tr><td>Nội tỉnh HN &amp; HCMC phường/xã, 0–3kg</td><td>21,000₫</td><td>29,000₫</td></tr>
-            <tr><td>Nội tỉnh other provinces, 0–3kg</td><td>15,500₫</td><td>29,000₫</td></tr>
-            <tr><td>Nội vùng, 0–0.5kg</td><td>29,000₫</td><td>34,000₫</td></tr>
-            <tr><td>Extra / 0.5kg</td><td colspan="2">+2,500₫ (nội tỉnh / nội vùng as published)</td></tr>
+            <tr><th data-i18n="cmp.ghn.th1">线路</th><th data-i18n="cmp.ghn.th2">市内</th><th data-i18n="cmp.ghn.th3">市外</th></tr>
+            <tr><td data-i18n="cmp.ghn.r1">同省 河内 &amp; 胡志明坊/社，0–3kg</td><td>21,000₫</td><td>29,000₫</td></tr>
+            <tr><td data-i18n="cmp.ghn.r2">同省 其他省市，0–3kg</td><td>15,500₫</td><td>29,000₫</td></tr>
+            <tr><td data-i18n="cmp.ghn.r3">同区域，0–0.5kg</td><td>29,000₫</td><td>34,000₫</td></tr>
+            <tr><td data-i18n="cmp.ghn.r4">续重 / 0.5kg</td><td colspan="2" data-i18n="cmp.ghn.r4v">+2,500₫（同省 / 同区域，按公布）</td></tr>
           </table>
-          <p class="src">Source: <a href="https://ghn.vn/pages/dich-vu-giao-hang">ghn.vn/pages/dich-vu-giao-hang</a>, retrieved 8 Nov 2026. Contract accounts can be cheaper. VAT treatment as shown on their estimator.</p>
+          <p class="src" data-i18n="cmp.ghn.src">来源：<a href="https://ghn.vn/pages/dich-vu-giao-hang">ghn.vn/pages/dich-vu-giao-hang</a>，2026-11-08 查阅。合同客户可能更低。增值税以估算器显示为准。</p>
         </div>
         <div class="card">
-          <h3>GHTK Express from HN &amp; HCMC</h3>
+          <h3 data-i18n="cmp.ghtk.h3">GHTK Express，从河内 &amp; 胡志明发出</h3>
           <table>
-            <tr><th>Lane</th><th>Phường</th></tr>
-            <tr><td>Nội tỉnh, up to 3kg</td><td>22,000₫</td></tr>
-            <tr><td>Nội miền, 0.5kg</td><td>30,000₫</td></tr>
-            <tr><td>Liên miền gần, 0.5kg</td><td>32,000₫</td></tr>
-            <tr><td>HN↔HCMC đặc biệt nhanh (bay), 0.5kg</td><td>40,000₫</td></tr>
-            <tr><td>Next 0.5kg nội tỉnh</td><td>+2,500₫</td></tr>
+            <tr><th data-i18n="cmp.ghn.th1">线路</th><th data-i18n="cmp.ghtk.th2">坊</th></tr>
+            <tr><td data-i18n="cmp.ghtk.r1">同省，至 3kg</td><td>22,000₫</td></tr>
+            <tr><td data-i18n="cmp.ghtk.r2">同区域，0.5kg</td><td>30,000₫</td></tr>
+            <tr><td data-i18n="cmp.ghtk.r3">近跨区域，0.5kg</td><td>32,000₫</td></tr>
+            <tr><td data-i18n="cmp.ghtk.r4">河内↔胡志明 特快（空运），0.5kg</td><td>40,000₫</td></tr>
+            <tr><td data-i18n="cmp.ghtk.r5">同省续重 0.5kg</td><td>+2,500₫</td></tr>
           </table>
-          <p class="src">Source: <a href="https://ghtk.vn/dich-vu-giao-hang/bang-gia-dich-vu-ghtk/">ghtk.vn bảng giá</a>, “áp dụng từ 12h ngày 22/09/2026”, VAT included. Xã rates are higher (e.g. nội tỉnh 30,000₫).</p>
+          <p class="src" data-i18n="cmp.ghtk.src">来源：<a href="https://ghtk.vn/dich-vu-giao-hang/bang-gia-dich-vu-ghtk/">ghtk.vn 价卡</a>，「自 2026-09-22 12:00 起」，含增值税。社级更高（如同省 30,000₫）。</p>
         </div>
       </div>
-      <p class="note" style="margin-top:12px">Shopee does not publish a national SPX ₫/kg table to buyers. Seller blogs quote ~13–25k inner/cross-region for light parcels; that is <span class="tag warn">not official</span>. Use checkout, not blogs, for live Shopee ship. International SLS ₫/kg is origin-specific (China vs Japan tables differ) and lives in Seller Center — a Japan-origin blog quoting 109,000₫ at 500g into VN is <strong>not</strong> a China-origin rate and is not used here.</p>
+      <p class="note" style="margin-top:12px" data-i18n="cmp.lm.note">Shopee 不对买家公布全国 SPX ₫/kg 表。卖家博客写轻小件同城/跨区约 1.3–2.5 万，<span class="tag warn">非正式</span>。Shopee 运费以结账为准。国际 SLS ₫/kg 按发货国不同（中国与日本表不同），在卖家中心——日本发货博客写 500g 进越 109,000₫ <strong>不是</strong>中国发货价，本文未采用。</p>
     </section>
 
     <section id="example">
-      <h2>Same order, three P&amp;Ls</h2>
-      <p>Assumptions (labeled): 199,000₫ serum, 0.5kg, HCMC inner → HCMC inner, <strong>local stock</strong>, company seller, no Voucher Xtra / Freeship Extra / KOC / ads. Last-mile compared at GHN 21,000₫ because that card is public; Shopee/TikTok checkout may differ.</p>
+      <h2 data-i18n="cmp.ex.h2">同一笔订单，三套损益</h2>
+      <p data-i18n="cmp.ex.p">假设（已标明）：199,000₫ 精华，0.5kg，胡志明市内→市内，<strong>本地仓</strong>，公司卖家，无 Voucher Xtra / Freeship Extra / 达人 / 广告。尾程用 GHN 21,000₫ 公开价对照；Shopee/TikTok 结账价可能不同。</p>
       <div class="scroll card">
         <table>
           <tr>
             <th></th>
-            <th>Shopee non-Mall</th>
-            <th>TikTok Shop standard</th>
-            <th>Shopify Basic + VNPay</th>
-            <th>Shopify Basic + COD</th>
+            <th data-i18n="cmp.ex.th.s">Shopee 非 Mall</th>
+            <th data-i18n="cmp.ex.th.t">TikTok Shop 普通店</th>
+            <th data-i18n="cmp.ex.th.vnpay">Shopify Basic + VNPay</th>
+            <th data-i18n="cmp.ex.th.cod">Shopify Basic + 货到付款</th>
           </tr>
-          <tr><td>Item</td><td>199,000</td><td>199,000</td><td>199,000</td><td>199,000</td></tr>
-          <tr><td>Commission</td><td>33,830 (17%)</td><td>27,860 (14%)</td><td>0</td><td>0</td></tr>
-          <tr><td>Transaction fee</td><td>11,940 (6% on item; 0 assumed buyer ship in this row)</td><td>11,940 (6%)</td><td>3,980 (2%)</td><td>0</td></tr>
-          <tr><td>Per-order platform</td><td>3,000</td><td>3,000</td><td>0</td><td>0</td></tr>
-          <tr><td>Last-mile GHN inner</td><td>Buyer-paid on Shopee (seller 0 if weight matches)</td><td>Seller or FES; 21,000 if you absorb GHN-like cost</td><td>21,000 if you absorb</td><td>21,000 if you absorb</td></tr>
-          <tr><td>Subscription / 100 orders</td><td>0</td><td>0</td><td>~$0.29–0.39</td><td>~$0.29–0.39</td></tr>
-          <tr><td><strong>Platform cut on item</strong></td><td><strong>48,770₫ (24.5%)</strong></td><td><strong>42,800₫ (21.5%)</strong></td><td><strong>3,980₫ (2%) + PSP MDR</strong></td><td><strong>0₫ + COD fail risk</strong></td></tr>
+          <tr><td data-i18n="cmp.ex.item">商品</td><td>199,000</td><td>199,000</td><td>199,000</td><td>199,000</td></tr>
+          <tr><td data-i18n="cmp.ex.comm">佣金</td><td>33,830（17%）</td><td>27,860（14%）</td><td>0</td><td>0</td></tr>
+          <tr><td data-i18n="cmp.ex.txn">交易费</td><td data-i18n="cmp.ex.txn.s">11,940（6%，本行假设买家运费为 0）</td><td>11,940（6%）</td><td>3,980（2%）</td><td>0</td></tr>
+          <tr><td data-i18n="cmp.ex.per">平台每单</td><td>3,000</td><td>3,000</td><td>0</td><td>0</td></tr>
+          <tr><td data-i18n="cmp.ex.lm">尾程 GHN 市内</td><td data-i18n="cmp.ex.lm.s">Shopee 由买家付（重量相符则卖家 0）</td><td data-i18n="cmp.ex.lm.t">卖家或 FES；若你承担 GHN 类成本则为 21,000</td><td data-i18n="cmp.ex.lm.sh">若你承担则为 21,000</td><td data-i18n="cmp.ex.lm.sh">若你承担则为 21,000</td></tr>
+          <tr><td data-i18n="cmp.ex.sub">订阅 / 按 100 单摊</td><td>0</td><td>0</td><td>~$0.29–0.39</td><td>~$0.29–0.39</td></tr>
+          <tr><td><strong data-i18n="cmp.ex.cut">平台对商品抽成</strong></td><td><strong data-i18n="cmp.ex.cut.s">48,770₫（24.5%）</strong></td><td><strong data-i18n="cmp.ex.cut.t">42,800₫（21.5%）</strong></td><td><strong data-i18n="cmp.ex.cut.v">3,980₫（2%）+ 支付公司费率</strong></td><td><strong data-i18n="cmp.ex.cut.c">0₫ + 货到付款拒收风险</strong></td></tr>
         </table>
       </div>
-      <p class="src">Sources for the cells: Shopee 17%+6%+3,000 <a href="https://sellerfee.app/en/shopee/vietnam/">sellerfee.app Example 1</a> from Shopee Uni PDFs; TikTok 14% default + 6% + 3,000 <a href="https://news.laodong.vn/kinh-doanh/tiktok-shop-tang-phi-tu-hom-nay-co-nganh-hang-chiu-phi-gan-20-1745104.ldo">Lao Động</a> + <a href="https://seller-vn.tiktok.com/university/essay?knowledge_id=753295858337537&amp;lang=en">TTS University</a>; GHN 21,000₫ <a href="https://ghn.vn/pages/dich-vu-giao-hang">ghn.vn</a>; Shopify 2% / COD 0% <a href="https://www.shopify.com/pricing">Pricing</a> + Help Center. VNPay MDR omitted — not a single public rate.</p>
+      <p class="src" data-i18n="cmp.ex.src">单元格来源：Shopee 17%+6%+3,000 <a href="https://sellerfee.app/en/shopee/vietnam/">sellerfee.app 例 1</a>（Shopee Uni PDF）；TikTok 默认 14% + 6% + 3,000 <a href="https://news.laodong.vn/kinh-doanh/tiktok-shop-tang-phi-tu-hom-nay-co-nganh-hang-chiu-phi-gan-20-1745104.ldo">劳动报</a> + <a href="https://seller-vn.tiktok.com/university/essay?knowledge_id=753295858337537&amp;lang=en">TTS University</a>；GHN 21,000₫ <a href="https://ghn.vn/pages/dich-vu-giao-hang">ghn.vn</a>；Shopify 2% / 货到付款 0% <a href="https://www.shopify.com/pricing">Pricing</a> + Help Center。未写入 VNPay 费率——没有单一公开价。</p>
 
       <div class="grid2" style="margin-top:16px">
         <div class="card">
-          <h3>If the same SKU is still in China</h3>
+          <h3 data-i18n="cmp.cn.h3">若同一 SKU 还在中国</h3>
           <ul>
-            <li>Add VAT on every express parcel since 18 Feb 2025 (Decision 01/2025/QĐ-TTg).</li>
-            <li>Duty if customs value &gt; ~1,000,000₫.</li>
-            <li>Add 7–15 days (Shopee Help) vs 1 day GHN inner.</li>
-            <li>Shopee still takes ~24.5% of the VND price <em>and</em> 6% of any buyer-paid international ship.</li>
-            <li>Shopify still takes 2% of a larger DDP price — cheaper take-rate, but you buy the click and you own customs.</li>
+            <li data-i18n="cmp.cn.l1">自 2025-02-18 起每票快递加增值税（第 01/2025/QĐ-TTg 号决定）。</li>
+            <li data-i18n="cmp.cn.l2">海关价值 &gt; 约 100 万越盾则加关税。</li>
+            <li data-i18n="cmp.cn.l3">再加 7–15 天（Shopee Help），对比 GHN 市内 1 天。</li>
+            <li data-i18n="cmp.cn.l4">Shopee 仍抽越南盾标价约 24.5%，<em>并且</em>买家付的国际运费再抽 6%。</li>
+            <li data-i18n="cmp.cn.l5">Shopify 仍对更高的 DDP 价抽 2%——抽成更低，但点击你买、清关你扛。</li>
           </ul>
-          <p class="src">Tax: <a href="https://vnmarketinsights.com/insights/cross-border-ecommerce/">vnmarketinsights</a>. SLA: Shopee Help 79556.</p>
+          <p class="src" data-i18n="cmp.cn.src">税务：<a href="https://vnmarketinsights.com/insights/cross-border-ecommerce/">vnmarketinsights</a>。时效：Shopee Help 79556。</p>
         </div>
         <div class="card">
-          <h3>What this means for cv-ecommerce</h3>
-          <p>Shopify is cheaper <strong>as a cash register</strong> (2% or 0%) and more expensive <strong>as a customer factory</strong> (you pay CAC that Shopee/TikTok bundle into the 20%+ take-rate). Use Shopee/TikTok to see if a China SKU still wins after 24% fees + VAT + 7–15 days. Put winners on Shopify with GHN/GHTK local stock so you keep the fee gap and match 1-day inner-city ship.</p>
+          <h3 data-i18n="cmp.mean.h3">对 cv-ecommerce 的含义</h3>
+          <p data-i18n="cmp.mean.p">Shopify 当<strong>收银机</strong>更便宜（2% 或 0%），当<strong>获客工厂</strong>更贵（你付获客成本，而 Shopee/TikTok 把它打进 20%+ 抽成）。用 Shopee/TikTok 验证：中国 SKU 在 24% 费用 + 增值税 + 7–15 天后是否仍赢。爆款放进 Shopify + GHN/GHTK 本地仓，既保住费率差，又对齐市区 1 日达。</p>
         </div>
       </div>
     </section>
 
     <section id="sources">
-      <h2>Source list</h2>
-      <p>Machine copy: <a href="https://github.com/pi0099/cv-ecommerce/blob/main/data/sources.md">data/sources.md</a> and <a href="https://github.com/pi0099/cv-ecommerce/blob/main/data/fees.json">data/fees.json</a>.</p>
+      <h2 data-i18n="cmp.src.h2">来源列表</h2>
+      <p data-i18n="cmp.src.p">机器可读副本：<a href="https://github.com/pi0099/cv-ecommerce/blob/main/data/sources.md">data/sources.md</a> 与 <a href="https://github.com/pi0099/cv-ecommerce/blob/main/data/fees.json">data/fees.json</a>。</p>
       <ol>
-        <li>Shopify Pricing — plan USD and third-party % — https://www.shopify.com/pricing</li>
-        <li>Shopify Help — third-party fee formula; COD/manual exempt — https://help.shopify.com/en/manual/your-account/manage-billing/billing-charges/types-of-charges/third-party-charges/third-party-transaction-fees</li>
-        <li>Shopify VN payment gateways (Payments not listed) — https://www.shopify.com/vn/payment-gateways?country=vn</li>
-        <li>Shopee Uni 25329 — 6%, 3,000₫, Voucher Xtra 5.5%, PiShip 2,700₫ — https://banhang.shopee.vn/edu/article/25329</li>
-        <li>sellerfee.app Shopee VN (cites official PDFs, 26 Oct 2026) — https://sellerfee.app/en/shopee/vietnam/</li>
-        <li>Shopee Uni 13246 — buyer pays ship; seller pays weight discrepancy — https://banhang.shopee.vn/edu/article/13246</li>
-        <li>Shopee Help 79534 / 79556 / 79651 — modes, 7–15 day international, SPX last-mile</li>
-        <li>TikTok Shop University Transaction Fee, updated 13 Oct 2026 — 6% from 9 May 2026</li>
-        <li>Lao Động 3 Aug 2026 — Mall commission, 3,000₫, 25% example</li>
-        <li>VTC News — TTS logistics operating fee &gt;10kg from 12 Oct 2026</li>
-        <li>GHN public bảng giá — https://ghn.vn/pages/dich-vu-giao-hang</li>
-        <li>GHTK bảng giá from 22 Sep 2026 — https://ghtk.vn/dich-vu-giao-hang/bang-gia-dich-vu-ghtk/</li>
-        <li>vnmarketinsights cross-border guide, 11 Oct 2026 — VAT, 7–14 days, 30–50% landed vs local</li>
+        <li>Shopify Pricing — 套餐美元价与第三方百分比 — https://www.shopify.com/pricing</li>
+        <li>Shopify Help — 第三方费公式；货到付款/手工免 — Help Center third-party fees</li>
+        <li>Shopify 越南支付网关（未列 Payments）— https://www.shopify.com/vn/payment-gateways?country=vn</li>
+        <li>Shopee Uni 25329 — 6%、3,000₫、Voucher Xtra 5.5%、PiShip 2,700₫</li>
+        <li>sellerfee.app Shopee VN（引自官方 PDF，2026-10-26）</li>
+        <li>Shopee Uni 13246 — 买家付运费；卖家付重量差</li>
+        <li>Shopee Help 79534 / 79556 / 79651 — 运输方式、国际 7–15 天、SPX 尾程</li>
+        <li>TikTok Shop University 交易费，2026-10-13 更新 — 2026-05-09 起 6%</li>
+        <li>劳动报 2026-08-03 — Mall 佣金、3,000₫、25% 示例</li>
+        <li>VTC News — TTS 超 10kg 物流操作费，2026-10-12 起</li>
+        <li>GHN 公开价卡 — https://ghn.vn/pages/dich-vu-giao-hang</li>
+        <li>GHTK 价卡 2026-09-22 起 — https://ghtk.vn/dich-vu-giao-hang/bang-gia-dich-vu-ghtk/</li>
+        <li>vnmarketinsights 跨境指南，2026-10-11 — 增值税、7–14 天、落地成本高 30–50%</li>
       </ol>
     </section>
   </main>
-  <footer>
-    Not a fee quote. Re-check Seller Center and carrier tools before pricing SKUs. Collected 8 Nov 2026.
-  </footer>
+  <footer data-i18n="cmp.footer">不是报价。定价前请再核卖家中心与承运商工具。采集于 2026 年 11 月 8 日。</footer>
+  <script src="i18n-en.js"></script>
+  <script src="i18n.js"></script>
 </body>
 </html>
