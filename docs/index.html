@@ -51,14 +51,12 @@
     .tag.bad { color: var(--bad); border-color: #6b3535; }
     ol, ul { color: var(--muted); padding-left: 18px; }
     li { margin: 6px 0; }
-    .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .shots img { width: 100%; border: 1px solid var(--line); }
     .timeline { border-left: 2px solid var(--line); margin-left: 8px; padding-left: 16px; }
     .titem { margin: 0 0 16px; }
     .titem strong { display: block; }
     footer { color: var(--muted); font-size: 12px; max-width: 1080px; margin: 0 auto; padding: 0 20px 40px; }
     @media (max-width: 800px) {
-      .kpis, .grid2, .shots { grid-template-columns: 1fr; }
+      .kpis, .grid2 { grid-template-columns: 1fr; }
       h1 { font-size: 22px; }
       .lang { margin-left: 0; width: 100%; }
     }
@@ -68,7 +66,7 @@
   <header>
     <div class="kicker" data-i18n="idx.kicker">cv-ecommerce · 简报 · 2026年11月8日</div>
     <h1 data-i18n="idx.h1">AI 帮越南用户买到更便宜的中国货</h1>
-    <p class="lead" data-i18n="idx.lead">用 AI 帮越南（随后东南亚）买家买到更便宜的中国货。前台是网页，早期结账走 Shopify。本页只放市场、税务、平台费与落地成本，便于选品和定价。</p>
+    <p class="lead" data-i18n="idx.lead">产品是一个 AI 购物网页：帮越南买家（随后东南亚）买到更便宜的中国货。早期用 Shopify 做目录和结账，之后再加落地价与问答。下面是市场、税务、平台费和落地成本，用来选品和定价。</p>
   </header>
   <nav>
     <a href="index.html" data-i18n="nav.briefing">市场简报</a>
@@ -78,7 +76,6 @@
     <a href="#tax" data-i18n="nav.tax">中越税务</a>
     <a href="#shopify" data-i18n="nav.shopify">Shopify 方案</a>
     <a href="#buyer" data-i18n="nav.buyer">买家习惯</a>
-    <a href="#skills" data-i18n="nav.skills">技能</a>
     <a href="#plan" data-i18n="nav.plan">30 天计划</a>
     <a href="#sources" data-i18n="nav.sources">来源</a>
     <div class="lang" role="group" aria-label="语言">
@@ -100,7 +97,7 @@
         </div>
         <div class="card">
           <h3 data-i18n="idx.impl.h3">怎么赢</h3>
-          <p data-i18n="idx.impl.p">不是再做一个 Shopee。平台 GMV 已是双寡头。独立站只有在 AI + 中国货源给出<strong>看得见的落地价优势</strong>（增值税、关税、运费、慢物流之后仍便宜），并且结账本地化（越南盾、钱包、货到付款）时才成立。</p>
+          <p data-i18n="idx.impl.p">不复制 Shopee。Shopee 与 TikTok Shop 已占平台 GMV 约 97%。独立站要成立，必须在增值税、关税、运费和较慢物流之后，仍给出<strong>看得见的越南盾落地价优势</strong>，并且结账本地化：越南盾、钱包、货到付款。</p>
         </div>
       </div>
     </section>
@@ -199,8 +196,8 @@
           </ul>
         </div>
         <div class="card">
-          <h3 data-i18n="idx.wedge.h3">AI 网页的切入点</h3>
-          <p data-i18n="idx.wedge.p">买家已经在 Shopee/TikTok 上找便宜中国货。产品只有做成这两家做不好的事才赢：</p>
+          <h3 data-i18n="idx.wedge.h3">产品怎么赢</h3>
+          <p data-i18n="idx.wedge.p">买家已经在 Shopee 和 TikTok Shop 上找便宜中国货。这个站只做那两家做不好的事才赢：</p>
           <ol>
             <li data-i18n="idx.wedge.l1">加购前就展示含税的真实越南盾落地价。</li>
             <li data-i18n="idx.wedge.l2">过滤垃圾/假货，用越南语讲清楚品质。</li>
@@ -208,24 +205,6 @@
             <li data-i18n="idx.wedge.l4">随后把爆款放进越南仓，速度对齐 Shopee。</li>
           </ol>
         </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <h2 data-i18n="idx.skills.h2">本仓库收集的技能</h2>
-      <p data-i18n="idx.skills.p">开源 Shopify/一件代发技能质量参差。下列安装量较高；项目专用技能已在 <code>.cursor/skills/vn-cross-border-ecommerce</code>。</p>
-      <div class="card">
-        <table>
-          <tr><th data-i18n="idx.skills.th1">技能</th><th data-i18n="idx.skills.th2">用途</th><th data-i18n="idx.skills.th3">安装量 / 来源</th></tr>
-          <tr><td>vn-cross-border-ecommerce（本仓库）</td><td data-i18n="idx.skills.r1b">落地成本、增值税/关税、越南 Shopify、122/2025 号法律</td><td data-i18n="idx.skills.r1c">为 cv-ecommerce 编写</td></tr>
-          <tr><td>nexscope-ai/ecommerce-skills@dropshipping-product-research</td><td data-i18n="idx.skills.r2b">选品与价格对比</td><td>~1.9k · skills.sh</td></tr>
-          <tr><td>nexscope-ai/ecommerce-skills@shopify-dropshipping</td><td data-i18n="idx.skills.r3b">Shopify MVP 店铺运营</td><td>~1.3k · skills.sh</td></tr>
-          <tr><td>Adspirer（Meta/TikTok/Google）</td><td data-i18n="idx.skills.r4b">有 SKU 后做付费获客；TikTok 已占一半市场</td><td data-i18n="idx.skills.r4c">本机已有</td></tr>
-          <tr><td>conversion-tracking + CRO + copywriting</td><td data-i18n="idx.skills.r5b">独立站生死在结账，不在流量口号</td><td data-i18n="idx.skills.r4c">本机已有</td></tr>
-          <tr><td>website-seo-analytics + vercel/nextjs</td><td data-i18n="idx.skills.r6b">Shopify 之后的自定义 AI 层</td><td data-i18n="idx.skills.r4c">本机已有</td></tr>
-          <tr><td>finsilabs/awesome-ecommerce-skills@dropshipping-integration</td><td data-i18n="idx.skills.r7b">1688 / 供应商对接</td><td>~152 · skills.sh</td></tr>
-        </table>
-        <p style="margin-top:12px;font-size:13px" data-i18n="idx.skills.note">跳过安装量 1–30 的「dropshipping mastery」。优先用本项目技能 + 官方 Shopify/Vercel 文档。</p>
       </div>
     </section>
 
@@ -246,7 +225,7 @@
       <p data-i18n="idx.sources.p">完整链接：<a href="https://github.com/pi0099/cv-ecommerce/blob/main/data/sources.md">data/sources.md</a>。费用与运费对比：<a href="compare.html">compare.html</a>。主要来源：Metric（VCCI / 河内时报）；VECOM（VnEconomy）；vnmarketinsights；TGM 2025；电商法 122/2025/QH15；第 01/2025/QĐ-TTg 号决定；Shopify Pricing；Shopee Uni；TikTok Shop University；GHN/GHTK 价卡。</p>
     </section>
   </main>
-  <footer data-i18n="idx.footer">内部规划，采集于 2026 年 11 月 8 日。税率与费率会变，上架前请复核。不构成法律意见。</footer>
+  <footer data-i18n="idx.footer">市场与费率简报，采集于 2026 年 11 月 8 日。税率与费率会变，上架前请复核。不构成法律意见。</footer>
   <script src="i18n-en.js"></script>
   <script src="i18n.js"></script>
 </body>

@@ -8,7 +8,7 @@ description: >-
 
 # Vietnam cross-border e-commerce (cv-ecommerce)
 
-AI-powered **web** store that helps Vietnamese buyers get cheaper Chinese products. Early stage = **Shopify**, then custom AI layer. SEA later; Vietnam first. Pages briefing defaults to **Simplified Chinese** (EN toggle). Do not put private messages or personal names on the public briefing.
+AI-powered **web** store that helps Vietnamese buyers get cheaper Chinese products. Early stage = **Shopify**, then custom AI layer. SEA later; Vietnam first. Pages briefing defaults to **Simplified Chinese** (EN toggle). Public pages: product goal, market, tax, fees. No personal names.
 
 Do not use the em dash character (Unicode U+2014). Use a normal hyphen "-" (or a comma, colon, or period). Do not use the CJK long dash (U+2014 twice) either.
 

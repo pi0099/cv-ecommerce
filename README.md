@@ -27,7 +27,7 @@ Local: open [`docs/index.html`](docs/index.html) or [`docs/compare.html`](docs/c
 
 - Vietnam first; China sourcing for price.
 - Shopify at the start, not a Shopee clone.
-- Briefing pages must not include private messages or personal names.
+- Public pages: product goal, market, tax, fees. No personal names.
 
 ## Local Pages preview
 
