@@ -8,16 +8,17 @@ Early stage: **Shopify**. Later: custom AI layer (landed-cost quotes, Vietnamese
 
 Interactive report (GitHub Pages):
 
-**https://pi0099.github.io/cv-ecommerce/**
+- Market briefing: **https://pi0099.github.io/cv-ecommerce/**
+- Fees & shipping comparison: **https://pi0099.github.io/cv-ecommerce/compare.html**
 
-If Pages is still warming up, open [`docs/index.html`](docs/index.html) locally.
+Local: open [`docs/index.html`](docs/index.html) or [`docs/compare.html`](docs/compare.html).
 
 ## What’s in the repo
 
 | Path | Purpose |
 | --- | --- |
-| `docs/` | GitHub Pages briefing (market, tax, Shopify, skills, 30-day plan) |
-| `data/` | Sourced figures (`market.json`, `sources.md`) |
+| `docs/` | GitHub Pages: market briefing + sourced fee/shipping comparison |
+| `data/` | Sourced figures (`market.json`, `fees.json`, `sources.md`) |
 | `.cursor/skills/vn-cross-border-ecommerce/` | Agent skill for this project |
 
 ## Chat constraints (do not lose)

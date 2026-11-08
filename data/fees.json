@@ -1,0 +1,57 @@
+{
+  "as_of": "2026-11-08",
+  "disclaimer": "Rates change by category, shop type, and Seller Center. Worked examples are labeled. Not a quote.",
+  "shopify": {
+    "plans_usd_yearly_monthly_equivalent": { "Basic": 29, "Grow": 89, "Advanced": 359 },
+    "plans_usd_pay_monthly": { "Basic": 39, "Grow": 105, "Advanced": 399, "Plus_from": 2300 },
+    "third_party_txn_pct": { "Basic": 2, "Grow": 1, "Advanced": 0.6, "Plus": 0.2 },
+    "shopify_payments_in_vietnam": false,
+    "manual_cod_third_party_fee": false,
+    "sources": [
+      "https://www.shopify.com/pricing",
+      "https://help.shopify.com/en/manual/your-account/manage-billing/billing-charges/types-of-charges/third-party-charges/third-party-transaction-fees"
+    ]
+  },
+  "shopee_vn": {
+    "fixed_fee_non_mall_pct": [1.5, 17],
+    "fixed_fee_mall_pct": [1.5, 20.8],
+    "transaction_fee_pct": 6,
+    "infrastructure_vnd": 3000,
+    "voucher_xtra_pct": 5.5,
+    "voucher_xtra_cap_vnd": 50000,
+    "piship_vnd": 2700,
+    "sample_serum_non_mall_pct": 17,
+    "sources": [
+      "https://banhang.shopee.vn/edu/article/25329",
+      "https://sellerfee.app/en/shopee/vietnam/"
+    ]
+  },
+  "tiktok_shop_vn": {
+    "commission_default_non_mall_pct": 14,
+    "commission_default_mall_pct": 16,
+    "transaction_fee_pct": 6,
+    "transaction_fee_from": "2026-05-09",
+    "order_processing_vnd": 3000,
+    "freeship_extra_pct": [4.5, 5.5],
+    "logistics_ops_fee_over_10kg_vnd_max": 65000,
+    "logistics_ops_fee_from": "2026-10-12",
+    "sources": [
+      "https://seller-vn.tiktok.com/university/essay?knowledge_id=753295858337537&lang=en",
+      "https://news.laodong.vn/kinh-doanh/tiktok-shop-tang-phi-tu-hom-nay-co-nganh-hang-chiu-phi-gan-20-1745104.ldo",
+      "https://vtcnews.vn/tiktok-shop-sap-thu-them-phi-van-hanh-logistics-nguoi-mua-co-bi-anh-huong-ar1041515.html"
+    ]
+  },
+  "shipping_local": {
+    "ghn_hcmc_hanoi_inner_0_3kg_vnd": 21000,
+    "ghn_other_province_inner_0_3kg_vnd": 15500,
+    "ghtk_hcmc_hanoi_phuong_noidi_tỉnh_up_to_3kg_vnd": 22000,
+    "ghtk_effective": "2026-09-22",
+    "shopee_international_days": [7, 15],
+    "sources": [
+      "https://ghn.vn/pages/dich-vu-giao-hang",
+      "https://ghtk.vn/dich-vu-giao-hang/bang-gia-dich-vu-ghtk/",
+      "https://help.shopee.vn/portal/4/article/79556",
+      "https://banhang.shopee.vn/edu/article/13246"
+    ]
+  }
+}

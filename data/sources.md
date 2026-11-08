@@ -43,3 +43,36 @@ Figures below are **not mixed into one model**. Marketplace GMV ≠ nationwide B
   https://vietnamnet.vn/ghtk-giao-hang-nhanh-nhat-viettel-post-va-spx-express-khong-co-buu-gui-that-lac-2481053.html
 - Law 122/2025/QH15 on E-commerce, effective 1 Jul 2026 (livestream ID, seller docs, platform duties).  
   https://thuvienphapluat.vn/van-ban/EN/Thuong-mai/Law-122-2025-QH15-Electronic-Commerce/703876/tieng-anh.aspx
+
+## Platform fees (collected 8 Nov 2026)
+
+- Shopify plan prices and third-party transaction fees (Basic 2%, Grow 1%, Advanced 0.6%, Plus 0.2%).  
+  https://www.shopify.com/pricing  
+  https://help.shopify.com/en/manual/your-account/manage-billing/billing-charges/types-of-charges/third-party-charges/third-party-transaction-fees  
+  Manual COD / bank transfer: no Shopify third-party transaction fee (same Help Center page).
+- Shopee VN seller fees: transaction 6%; fixed fee from 1.50% by category; infrastructure 3,000₫; Voucher Xtra 5.5% cap 50,000₫; PiShip 2,700₫ (from 23 May 2026). Official hub:  
+  https://banhang.shopee.vn/edu/article/25329  
+  Category table compilation (cites Shopee PDFs, verified 26 Oct 2026):  
+  https://sellerfee.app/en/shopee/vietnam/
+- TikTok Shop VN transaction fee 6% from 9 May 2026, formula includes customer shipping:  
+  https://seller-vn.tiktok.com/university/essay?knowledge_id=753295858337537&lang=en  
+  Commission by category; Mall up to ~19.8% beauty; 3,000₫ processing; default 14%/16%:  
+  https://news.laodong.vn/kinh-doanh/tiktok-shop-tang-phi-tu-hom-nay-co-nganh-hang-chiu-phi-gan-20-1745104.ldo  
+  https://adtek.agency/en/tools/shopee-tiktok-fee-calculator/
+- TikTok logistics operating fee for parcels >10kg, seller-paid, max 65,000₫, from 12 Oct 2026:  
+  https://vtcnews.vn/tiktok-shop-sap-thu-them-phi-van-hanh-logistics-nguoi-mua-co-bi-anh-huong-ar1041515.html
+
+## Shipping fees
+
+- Shopee: listing price excludes buyer shipping; buyer sees fee at checkout; seller pays only weight/size discrepancy vs declared pack size. Official:  
+  https://banhang.shopee.vn/edu/article/13246  
+  Modes Hỏa tốc / Nhanh / Tiết kiệm / Cồng kềnh; chargeable weight max(actual, L×W×H/6000):  
+  https://help.shopee.vn/portal/4/article/79534  
+  International orders 7–15 days; Express International or Standard International, last-mile SPX:  
+  https://help.shopee.vn/portal/4/article/79556  
+  https://help.shopee.vn/portal/4/article/79651
+- GHN published inner-city HN/HCMC 0–3kg: 21,000₫ (inner) / 29,000₫ (outer); other provinces inner 15,500₫. Extra +2,500₫ / 0.5kg.  
+  https://ghn.vn/pages/dich-vu-giao-hang
+- GHTK Express from HN & HCMC, effective 22 Sep 2026, VAT included: nội tỉnh phường 22,000₫ up to 3kg.  
+  https://ghtk.vn/dich-vu-giao-hang/bang-gia-dich-vu-ghtk/
+- Shopify has no Vietnam carrier rate card. “Up to 87% off shipping labels” on shopify.com/pricing is Shopify’s own label program (not GHN/GHTK). VN last-mile = merchant contract with GHN/GHTK/etc.
