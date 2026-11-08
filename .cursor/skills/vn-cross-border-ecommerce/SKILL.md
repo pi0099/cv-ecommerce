@@ -10,6 +10,8 @@ description: >-
 
 AI-powered **web** store that helps Vietnamese buyers get cheaper Chinese products. Early stage = **Shopify**, then custom AI layer. SEA later; Vietnam first. Pages briefing defaults to **Simplified Chinese** (EN toggle). Do not put private messages or personal names on the public briefing.
 
+Do not use the em dash character (Unicode U+2014). Use a normal hyphen "-" (or a comma, colon, or period). Do not use the CJK long dash (U+2014 twice) either.
+
 ## Do this first
 
 1. Treat Shopify as checkout + catalog, not as the marketplace. Shopee + TikTok Shop are ~97% of tracked GMV. A standalone store wins only with a price/search/AI wedge, not by cloning Shopee.
