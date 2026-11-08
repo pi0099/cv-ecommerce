@@ -2,14 +2,8 @@
   "collected_on": "2026-11-08",
   "project": {
     "working_name": "cv-ecommerce",
-    "from_chat": {
-      "sponsor": "Taylor (TC)",
-      "collaborator": "Lam",
-      "model": "AI-powered web app helping users buy cheaper Chinese products",
-      "geo": "Southeast Asia, Vietnam first",
-      "mvp_stack": "Shopify in early stages",
-      "prior_art": "Same project as a previous mobile app, now web"
-    }
+    "purpose": "AI web store helping Vietnam-first (then SEA) buyers get cheaper China-origin products",
+    "mvp_stack": "Shopify checkout and catalog; AI landed-cost and Q&A later"
   },
   "market": {
     "four_platform_gmv_2025_usd_billion": 16.35,

@@ -23,12 +23,11 @@ Local: open [`docs/index.html`](docs/index.html) or [`docs/compare.html`](docs/c
 | `data/` | Sourced figures (`market.json`, `fees.json`, `sources.md`) |
 | `.cursor/skills/vn-cross-border-ecommerce/` | Agent skill for this project |
 
-## Chat constraints (do not lose)
+## Product constraints
 
-- Same product as a previous **mobile** app, now **web**.
-- Not a news site.
-- Vietnam first; China sourcing because it is cheaper.
+- Vietnam first; China sourcing for price.
 - Shopify at the start, not a Shopee clone.
+- Briefing pages must not include private messages or personal names.
 
 ## Local Pages preview
 
