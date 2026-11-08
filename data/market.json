@@ -1,0 +1,42 @@
+{
+  "collected_on": "2026-11-08",
+  "project": {
+    "working_name": "cv-ecommerce",
+    "from_chat": {
+      "sponsor": "Taylor (TC)",
+      "collaborator": "Lam",
+      "model": "AI-powered web app helping users buy cheaper Chinese products",
+      "geo": "Southeast Asia, Vietnam first",
+      "mvp_stack": "Shopify in early stages",
+      "prior_art": "Same project as a previous mobile app, now web"
+    }
+  },
+  "market": {
+    "four_platform_gmv_2025_usd_billion": 16.35,
+    "four_platform_gmv_2025_vnd_trillion": 429.7,
+    "four_platform_gmv_yoy_pct": 34.75,
+    "items_sold_2025_billion": 3.94,
+    "b2c_moit_vecom_2025_usd_billion": 31,
+    "b2c_vecom_report_2025_usd_billion": 38.5,
+    "b2c_projection_2026_usd_billion": 44.3,
+    "h1_2026_gmv_metric_vnd_trillion": 291.6,
+    "h1_2026_gmv_younet_vnd_trillion": 264.8,
+    "share_2025": [
+      { "platform": "Shopee", "share_pct": 56.04 },
+      { "platform": "TikTok Shop", "share_pct": 41.31 },
+      { "platform": "Lazada", "share_pct": 2.0 },
+      { "platform": "Tiki", "share_pct": 0.65 }
+    ],
+    "active_sellers_2025": 601800,
+    "active_sellers_yoy_pct": -7.43
+  },
+  "tax": {
+    "vat_on_all_express_parcels_from": "2025-02-18",
+    "duty_exemption_vnd": 1000000,
+    "draft_duty_exemption_vnd": 100000,
+    "draft_status": "consultation, not in force",
+    "standard_vat_pct": 10,
+    "temporary_vat_many_goods_pct": 8,
+    "temporary_vat_until": "2026-12-31"
+  }
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>cv-ecommerce — Vietnam briefing</title>
+  <meta name="description" content="Market, tax, Shopify, and skill briefing for an AI-powered China-to-Vietnam shopping web app." />
+  <style>
+    :root {
+      --bg: #0f1419;
+      --panel: #171e27;
+      --line: #2a3542;
+      --text: #e8eef4;
+      --muted: #93a0ae;
+      --accent: #3d9cf0;
+      --good: #3db88a;
+      --warn: #e0a23a;
+      --bad: #e06b6b;
+      --shopee: #ee4d2d;
+      --tiktok: #25f4ee;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    a { color: var(--accent); }
+    header {
+      border-bottom: 1px solid var(--line);
+      padding: 28px 20px 20px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .kicker { color: var(--muted); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { font-size: 28px; line-height: 1.2; margin: 8px 0 10px; font-weight: 600; }
+    h2 { font-size: 20px; margin: 0 0 12px; font-weight: 600; }
+    h3 { font-size: 15px; margin: 0 0 8px; font-weight: 600; }
+    p { color: var(--muted); margin: 0 0 12px; }
+    .lead { color: var(--text); max-width: 720px; }
+    nav {
+      display: flex; flex-wrap: wrap; gap: 10px 16px;
+      max-width: 1080px; margin: 0 auto; padding: 12px 20px;
+      border-bottom: 1px solid var(--line); position: sticky; top: 0;
+      background: var(--bg); z-index: 2;
+    }
+    nav a { color: var(--muted); text-decoration: none; font-size: 13px; }
+    nav a:hover { color: var(--text); }
+    main { max-width: 1080px; margin: 0 auto; padding: 24px 20px 80px; }
+    section { margin: 40px 0; }
+    .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .kpi { background: var(--panel); border: 1px solid var(--line); padding: 14px 16px; }
+    .kpi b { display: block; font-size: 22px; font-weight: 600; }
+    .kpi span { color: var(--muted); font-size: 12px; }
+    .grid2 { display: grid; grid-template-columns: 1.2fr .8fr; gap: 16px; }
+    .card { background: var(--panel); border: 1px solid var(--line); padding: 18px; }
+    .bar { display: grid; grid-template-columns: 110px 1fr 52px; gap: 8px; align-items: center; margin: 8px 0; font-size: 13px; }
+    .track { background: #243040; height: 10px; }
+    .fill { height: 10px; background: var(--accent); }
+    .fill.s { background: var(--shopee); }
+    .fill.t { background: #2ad4ce; }
+    .fill.l { background: #4b6cb7; }
+    .fill.k { background: #8a90a0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { color: var(--muted); font-weight: 500; font-size: 12px; }
+    .tag { display: inline-block; font-size: 11px; padding: 2px 7px; border: 1px solid var(--line); color: var(--muted); margin-right: 4px; }
+    .tag.ok { color: var(--good); border-color: #2e5f4c; }
+    .tag.warn { color: var(--warn); border-color: #6b5420; }
+    .tag.bad { color: var(--bad); border-color: #6b3535; }
+    ol, ul { color: var(--muted); padding-left: 18px; }
+    li { margin: 6px 0; }
+    .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .shots img { width: 100%; border: 1px solid var(--line); }
+    .timeline { border-left: 2px solid var(--line); margin-left: 8px; padding-left: 16px; }
+    .titem { margin: 0 0 16px; }
+    .titem strong { display: block; }
+    footer { color: var(--muted); font-size: 12px; max-width: 1080px; margin: 0 auto; padding: 0 20px 40px; }
+    @media (max-width: 800px) {
+      .kpis, .grid2, .shots { grid-template-columns: 1fr; }
+      h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="kicker">cv-ecommerce · briefing · 8 Nov 2026</div>
+    <h1>AI shopping for cheaper Chinese goods, Vietnam first</h1>
+    <p class="lead">Taylor is spinning up an AI-powered <strong>web</strong> store (same idea as the earlier mobile app) so Vietnamese buyers can get China-origin products cheaper. Early stage is Shopify. This page is the working briefing: what the chat said, what the VN market actually looks like, and which skills/tools to use next.</p>
+  </header>
+  <nav>
+    <a href="#brief">Chat brief</a>
+    <a href="#market">Market</a>
+    <a href="#tax">China → VN tax</a>
+    <a href="#shopify">Shopify stack</a>
+    <a href="#buyer">Buyer behavior</a>
+    <a href="#skills">Skills</a>
+    <a href="#plan">Recommended plan</a>
+    <a href="#sources">Sources</a>
+  </nav>
+  <main>
+    <section id="brief">
+      <h2>What the chat decided</h2>
+      <div class="grid2">
+        <div class="card">
+          <table>
+            <tr><th>Who</th><td>Taylor (TC) founding; Lam joining for VN market knowledge</td></tr>
+            <tr><th>Product</th><td>Web app with AI to help users buy cheaper Chinese products</td></tr>
+            <tr><th>Not</th><td>A news/info site (midasmarkets.xyz was a false lead). Not the old mobile app.</td></tr>
+            <tr><th>Geo</th><td>SEA cross-border e-commerce, start in Vietnam</td></tr>
+            <tr><th>MVP</th><td>“We’ll start with Shopify in the early stages.”</td></tr>
+            <tr><th>Now</th><td>Product selection + team; Lam to be added to group chat</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Implication</h3>
+          <p>This is not “build Shopee.” Marketplace GMV is a duopoly. A Shopify store only works if AI + China sourcing produces a <em>visible landed-price advantage</em> after VAT, duty, freight, and slow delivery — and if checkout feels local (VND, wallets, COD).</p>
+        </div>
+      </div>
+      <div class="shots" style="margin-top:16px">
+        <figure>
+          <img src="assets/chat-brief.png" alt="Chat: AI-powered cross-border e-commerce in SEA, web not mobile" />
+        </figure>
+        <figure>
+          <img src="assets/chat-shopify.png" alt="Chat: Shopify in early stages, study Vietnam e-commerce" />
+        </figure>
+      </div>
+    </section>
+
+    <section id="market">
+      <h2>Vietnam e-commerce snapshot</h2>
+      <p>Two different rulers exist. Do not add them. Marketplace GMV is Shopee + TikTok Shop + Lazada + Tiki. Nationwide B2C also includes brand sites and social selling.</p>
+      <div class="kpis">
+        <div class="kpi"><b>$16.35B</b><span>4-platform GMV 2025 (Metric)</span></div>
+        <div class="kpi"><b>+35%</b><span>YoY marketplace GMV</span></div>
+        <div class="kpi"><b>$31–38.5B</b><span>Broader B2C 2025 (MoIT/VECOM)</span></div>
+        <div class="kpi"><b>$44.3B</b><span>VECOM 2026 projection</span></div>
+      </div>
+      <div class="grid2" style="margin-top:16px">
+        <div class="card">
+          <h3>Four-platform share, full year 2025 (Metric)</h3>
+          <div class="bar"><span>Shopee</span><div class="track"><div class="fill s" style="width:56.04%"></div></div><span>56.0%</span></div>
+          <div class="bar"><span>TikTok Shop</span><div class="track"><div class="fill t" style="width:41.31%"></div></div><span>41.3%</span></div>
+          <div class="bar"><span>Lazada</span><div class="track"><div class="fill l" style="width:2%"></div></div><span>~2%</span></div>
+          <div class="bar"><span>Tiki</span><div class="track"><div class="fill k" style="width:0.65%"></div></div><span>&lt;1%</span></div>
+          <p style="margin-top:12px;font-size:13px">Together Shopee + TikTok Shop ≈ 97%. Q&amp;Me (May 2025–Apr 2026) already has TikTok Shop at 44% vs Shopee 53%. H1 2026 Metric GMV VND 291.6T (+44.1%); YouNet counts VND 264.8T (+19%) for the same window — cite the source you use.</p>
+        </div>
+        <div class="card">
+          <h3>Operating climate</h3>
+          <ul>
+            <li>3.94B items sold on the four platforms in 2025 (+15%).</li>
+            <li>Active sellers fell 7.4% to ~601.8k — volume is consolidating.</li>
+            <li>HCMC + Hanoi dominate Shopee GMV (Metric: ~42% and ~41% of Shopee’s VN GMV).</li>
+            <li>H1 2026 category growth: electronics 26%, FMCG 20%, fashion 18%, beauty 12%.</li>
+            <li>2025 popular cats: beauty, home/lifestyle, women’s fashion.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="tax">
+      <h2>Why “cheaper from China” is getting harder</h2>
+      <p>The old loophole — express parcels under VND 1 million with no import VAT — is gone. Duty relief is still there, but a 2026 draft would almost wipe it out.</p>
+      <div class="grid2">
+        <div class="card">
+          <div class="timeline">
+            <div class="titem"><strong>18 Feb 2025</strong><span class="tag bad">in force</span><p>Decision 01/2025/QĐ-TTg: every express parcel pays import VAT, including ≤ VND 1,000,000 (~USD 40). Press cited 4–5 million small China→VN orders/day under the old exemption.</p></div>
+            <div class="titem"><strong>Today (Nov 2026)</strong><span class="tag ok">current</span><p>Duty still exempt under ~VND 1M per express parcel. VAT 10% standard; many goods temporarily 8% until 31 Dec 2026. ACFTA Form E can cut China duty vs MFN (apparel/cosmetics often 15–22% MFN).</p></div>
+            <div class="titem"><strong>Sep 2026 draft</strong><span class="tag warn">not issued</span><p>MoF consults on cutting the duty exemption to ~VND 100,000 (~USD 4) or tax payable ≤ VND 10,000. If adopted, almost every commercial parcel pays duty + VAT.</p></div>
+            <div class="titem"><strong>1 Jul 2026</strong><span class="tag warn">law live</span><p>E-commerce Law 122/2025/QH15: livestream ID, seller quality docs, platform duties. A Vietnamese-language or .vn storefront can be treated as a platform and may need registration + resident representative.</p></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Landed-cost stack to model on every SKU</h3>
+          <ol>
+            <li>China EXW (1688 / factory)</li>
+            <li>Inbound freight + insurance (CIF)</li>
+            <li>Import duty if parcel &gt; VND 1M (HS code; ACFTA if C/O)</li>
+            <li>VAT on (CIF + duty)</li>
+            <li>Last-mile (GHN / GHTK / Viettel Post / J&amp;T)</li>
+            <li>Payment cost + COD fail/return leakage</li>
+            <li>Shopify subscription + 3rd-party transaction fee</li>
+          </ol>
+          <p>Industry rule of thumb: switch from parcel import to local 3PL stock around <strong>USD 50–100k monthly sales</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="shopify">
+      <h2>Shopify in Vietnam — early-stage stack</h2>
+      <div class="kpis">
+        <div class="kpi"><b>No</b><span>Shopify Payments in VN</span></div>
+        <div class="kpi"><b>+2%</b><span>Basic plan extra fee on 3rd-party checkout</span></div>
+        <div class="kpi"><b>COD</b><span>Still the most preferred method (~35%)</span></div>
+        <div class="kpi"><b>1–2d</b><span>Urban last-mile if stock is local</span></div>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <table>
+          <tr><th>Layer</th><th>Use</th><th>Watch-out</th></tr>
+          <tr><td>Store</td><td>Shopify Online Store, VND, Vietnamese, phone-first theme</td><td>Desktop-first themes convert poorly (92% shop on phones)</td></tr>
+          <tr><td>Pay</td><td>VNPay official app; bank QR; manual COD</td><td>MoMo/ZaloPay are not native. Extra Shopify fee on top of PSP rates. COD must be an app or manual method.</td></tr>
+          <tr><td>Ship</td><td>GHN (volume), GHTK (cost + daily COD remittance), Viettel Post (coverage/safety), J&amp;T</td><td>Do not promise marketplace-speed delivery on CN dropship parcels</td></tr>
+          <tr><td>Sourcing</td><td>1688 / factory, not retail Taobao screenshots</td><td>Cosmetics, food, supplements need registration</td></tr>
+          <tr><td>AI (after checkout works)</td><td>Landed-cost quote, VN Q&amp;A, 1688 match, quality/fake flags</td><td>AI claims on livestream/ads fall under the new e-commerce law</td></tr>
+          <tr><td>Demand</td><td>TikTok/Shopee for discovery even if checkout is Shopify</td><td>TikTok Shop has no simple ship-from-abroad program; local entity or partner</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="buyer">
+      <h2>How Vietnamese buyers actually shop</h2>
+      <div class="grid2">
+        <div class="card">
+          <ul>
+            <li>~50% shop online weekly (TGM); YouNet 62.8% among digital consumers.</li>
+            <li>92% smartphone vs 30% desktop.</li>
+            <li>Categories: clothing 63%, personal care 55%, beauty 48% (TGM).</li>
+            <li>COD preferred by 35%; BNPL <em>used</em> by 49% (usage ≠ preference).</li>
+            <li>~35% have joined livestream shopping; Gen Z uses micro-influencers and shoppertainment.</li>
+            <li>Price, speed, and easy returns sit above brand. Cross-border lose on speed/returns unless you hold VN stock.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>AI web app wedge (from the chat + data)</h3>
+          <p>Buyers already find cheap China goods on Shopee/TikTok. The product only wins if it does something those apps do badly:</p>
+          <ol>
+            <li>Show true VND landed price, tax included, before add-to-cart.</li>
+            <li>Filter junk/fake listings and explain quality in Vietnamese.</li>
+            <li>Offer local payment + realistic delivery windows.</li>
+            <li>Later: hold fast-movers in a VN warehouse so speed matches Shopee.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills collected for this repo</h2>
+      <p>Open-ecosystem Shopify/dropshipping skills exist but quality is uneven. High-install ones are listed; a project-specific skill is already in <code>.cursor/skills/vn-cross-border-ecommerce</code>.</p>
+      <div class="card">
+        <table>
+          <tr><th>Skill</th><th>Why it maps to the chat</th><th>Installs / source</th></tr>
+          <tr><td>vn-cross-border-ecommerce (this repo)</td><td>Landed cost, VAT/duty, Shopify VN, Law 122/2025</td><td>Written for cv-ecommerce</td></tr>
+          <tr><td>nexscope-ai/ecommerce-skills@dropshipping-product-research</td><td>SKU selection Taylor is doing now</td><td>~1.9k · skills.sh</td></tr>
+          <tr><td>nexscope-ai/ecommerce-skills@shopify-dropshipping</td><td>Shopify MVP store ops</td><td>~1.3k · skills.sh</td></tr>
+          <tr><td>Adspirer (Meta/TikTok/Google)</td><td>Paid acquisition once SKUs exist; TikTok is half the market</td><td>Already on this machine</td></tr>
+          <tr><td>conversion-tracking + CRO + copywriting</td><td>Standalone store lives or dies on checkout, not traffic</td><td>Already on this machine</td></tr>
+          <tr><td>website-seo-analytics + vercel/nextjs</td><td>Custom AI web layer after Shopify</td><td>Already on this machine</td></tr>
+          <tr><td>finsilabs/awesome-ecommerce-skills@dropshipping-integration</td><td>1688/supplier plumbing</td><td>~152 · skills.sh</td></tr>
+        </table>
+        <p style="margin-top:12px;font-size:13px">Skipped: 1–30 install “dropshipping mastery” skills. Prefer the project skill + official Shopify/Vercel docs.</p>
+      </div>
+    </section>
+
+    <section id="plan">
+      <h2>Recommended next 30 days</h2>
+      <ol>
+        <li><strong>Pick 20 SKUs</strong> in beauty accessories, home, or fashion basics — high search, inspectable quality, no special licences.</li>
+        <li><strong>Build a landed-cost sheet</strong> (China + freight + VAT + duty if &gt;1M + last-mile + 8–12% leak). Kill SKUs that are not clearly cheaper than Shopee after that.</li>
+        <li><strong>Stand up Shopify</strong>: VND, Vietnamese, VNPay + COD, GHN or GHTK.</li>
+        <li><strong>Do not dropship everything.</strong> Pre-stock a few winners in HCMC/HN so delivery is 1–2 days.</li>
+        <li><strong>AI v0</strong>: a VN chatbot / search that explains the product and the tax-inclusive price. Leave livestream until Law 122 processes are understood.</li>
+        <li><strong>Legal</strong>: business registration path; whether the site is a “platform”; PDPD for customer data.</li>
+      </ol>
+    </section>
+
+    <section id="sources">
+      <h2>Sources</h2>
+      <p>Full list with URLs: <a href="https://github.com/pi0099/cv-ecommerce/blob/main/data/sources.md">data/sources.md</a>. Primary: Metric via VCCI/Hanoi Times; VECOM via VnEconomy; vnmarketinsights (market + cross-border tax); TGM Research 2025; Law 122/2025/QH15; Decision 01/2025/QĐ-TTg; Shopify/Pendym on Payments availability.</p>
+    </section>
+  </main>
+  <footer>
+    Collected 8 Nov 2026 for internal planning. Tax and fee tables change; re-check before pricing live SKUs. Not legal advice.
+  </footer>
+</body>
+</html>
